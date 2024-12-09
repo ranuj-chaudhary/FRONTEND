@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <div class="app">
+      <div class="countdown">
+        <h1>Countdown Timer</h1>
+        <div class="countdown__time">
+          <label for="hour"
+            ><p class="countdown__timer-title">Hour</p>
+            <input
+              class="countdown__input countdown__hours"
+              id="hour"
+              type="number"
+              placeholder="00"
+              maxlength="2"
+          /></label>
+          <label for="minutes"
+            ><p class="countdown__timer-title">Minutes</p>
+            <input
+              class="countdown__input countdown__minutes"
+              id="minutes"
+              type="number"
+              placeholder="00"
+              maxlength="2"
+          /></label>
+          <label for="seconds"
+            ><p class="countdown__timer-title">Seconds</p>
+            <input
+              class="countdown__input countdown__seconds"
+              id="seconds"
+              type="number"
+              placeholder="00"
+              maxlength="2"
+          /></label>
+        </div>
+        <div class="countdown__buttons">
+          <button class="countdown__btn countdown__btn--start">Start</button>
+          <button
+            class="countdown__btn countdown__btn--pause countdown__btn--hidden"
+          >
+            Pause
+          </button>
+          <button
+            class="countdown__btn countdown__btn--continue countdown__btn--hidden"
+          >
+            Continue
+          </button>
+          <button class="countdown__btn countdown__btn--reset">Reset</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

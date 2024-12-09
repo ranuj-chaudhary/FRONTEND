@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style/styles.css" />
+    <script src="js/index.js" defer></script>
+  </head>
+  <body>
+    <div class="app">
+      <header class="employee-header">
+        <h1 class="employee-header__heading">Employee Database Management</h1>
+        <button class="employee-header__create-employee">Add Employee</button>
+        <div class="addEmployee">
+          <form class="addEmployee__create">
+            <div>
+              <label
+                for="firstname
+              "
+                >Firstname:
+                <input
+                  id="firstname"
+                  type="text"
+                  name="firstname"
+                  placeholder="enter firstname"
+                  required
+                  maxlength="50"
+                  class="addEmployee__input"
+                />
+              </label>
+            </div>
+            <div>
+              <label
+                for="lastname
+              "
+              >
+                lastname:
+                <input
+                  id="lastname"
+                  type="text"
+                  name="lastname"
+                  placeholder="enter lastname"
+                  required
+                  maxlength="50"
+                  class="addEmployee__input"
+                />
+              </label>
+            </div>
+            <div>
+              <label
+                for="email
+              "
+              >
+                email:
+                <input
+                  id="email"
+                  type="text"
+                  name="email"
+                  placeholder="enter email"
+                  required
+                  maxlength="50"
+                  class="addEmployee__input"
+                />
+              </label>
+            </div>
+            <div>
+              <label
+                for="contactNumber
+              "
+              >
+                contactNumber:
+                <input
+                  id="contactNumber"
+                  type="number"
+                  name="contactNumber"
+                  placeholder="enter contactNumber"
+                  required
+                  maxlength="50"
+                  class="addEmployee__input"
+                />
+              </label>
+            </div>
+
+            <div>
+              <label
+                for="dob
+              "
+              >
+                dob:
+                <input
+                  id="dob"
+                  type="date"
+                  name="dob"
+                  placeholder="enter dob"
+                  required
+                  class="addEmployee__input addEmployee__create--dob"
+                />
+              </label>
+            </div>
+            <div>
+              <label
+                for="salary
+              "
+              >
+                salary:
+                <input
+                  id="salary"
+                  type="number"
+                  name="salary"
+                  placeholder="enter salary"
+                  required
+                  max="9999999999999999999"
+                  class="addEmployee__input"
+                />
+              </label>
+            </div>
+            <div>
+              <label
+                for="address
+              "
+              >
+                address:
+                <input
+                  id="address"
+                  type="text"
+                  name="address"
+                  placeholder="enter address"
+                  required
+                  maxlength="50"
+                  class="addEmployee__input"
+                />
+              </label>
+            </div>
+            <div>
+              <button class="addEmployee__submit-btn" type="submit">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </header>
+      <div class="employee">
+        <div class="employee__data">
+          <h2 class="employee__data-heading">Employee Data</h2>
+          <ul class="employee__list"></ul>
+        </div>
+        <div class="employee__details">
+          <h2 class="employee__detail-heading">Employee details</h2>
+          <div class="employee__profile"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

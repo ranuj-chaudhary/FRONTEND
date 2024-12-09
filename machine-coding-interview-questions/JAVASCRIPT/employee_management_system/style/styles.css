@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-text-color: #302d2d;
+  --seconday-text-color: #504e4e;
+  --primary-color: #44b962;
+  --secondary-color: #0a6e28;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: sans-serif, Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--primary-color) ;
+}
+
+/* HEADER */
+
+.employee-header {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 4px;
+}
+
+.employee-header .addEmployee {
+  position: absolute;
+  height: 100%;
+  background-color: #302d2db2;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.addEmployee .addEmployee__create {
+  width: 40%;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: white;
+}
+
+.addEmployee__input {
+  width: 100%;
+  padding: 4px 0;
+  margin-bottom: 6px;
+}
+
+.addEmployee__input::placeholder {
+  padding-left: 4px;
+}
+
+.addEmployee__create label {
+  text-transform: capitalize;
+}
+
+.addEmployee__submit-btn {
+  padding: 8px 6px;
+  width: 100%;
+  margin: 10px 0;
+}
+
+/* EMPLOYEE DATA */
+
+.employee {
+  display: flex;
+  height: 90vh;
+}
+
+.employee__data {
+  width: 30%;
+  padding: 8px;
+  border: 2px solid black;
+  overflow-y: auto;
+}
+.employee__data .employee__data-heading {
+  border-bottom: 2px solid black;
+}
+
+.employee__details {
+  width: 70%;
+  border: 2px solid black;
+  padding: 8px;
+}
+
+.employee__details .employee__detail-heading {
+  border-bottom: 2px solid black;
+  text-align: center;
+}
+
+.employee__item {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 4px;
+  background-color: #eeeeee;
+  padding: 8px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.employee__item.employee__item--selected {
+  background-color: #c5c5c5;
+}
+
+.employee__details .employee__image {
+  width: 120px;
+  height: 120px;
+  aspect-ratio: 3/4;
+}
+
+.employee__profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}

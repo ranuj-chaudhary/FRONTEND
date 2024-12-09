@@ -1,0 +1,18 @@
+.directory {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin-left: 20px;
+}
+
+.directory__folder {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  background-color: rgb(192, 191, 191);
+  padding: 4px;
+}
+
+.btn {
+  margin: 0 5px;
+}
