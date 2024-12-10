@@ -1,9 +1,11 @@
 import "./App.css";
+import Products from "./component/Product/Products";
 
 function App() {
   return (
     <div className="App">
-      <p>react</p>
+    
+      <Products />
     </div>
   );
 }
