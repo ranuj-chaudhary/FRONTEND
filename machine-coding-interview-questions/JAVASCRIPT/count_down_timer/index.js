@@ -78,6 +78,7 @@ pauseBtn.addEventListener("click", (e) => {
   startBtn.classList.remove("countdown__btn--hidden");
   pauseBtn.classList.add("countdown__btn--hidden");
 });
+// Pause timer --- end
 
 // helpers
 function resetTimer(hour, minutes, seconds, id) {
