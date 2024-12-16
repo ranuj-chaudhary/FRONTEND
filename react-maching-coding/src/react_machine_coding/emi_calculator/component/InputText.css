@@ -1,0 +1,14 @@
+.input-text__label {
+  font-style: bold;
+  display: block;
+  margin-top: 10px;
+  font-size: 1.25rem;
+}
+
+.input-text__input {
+  font-style: bold;
+  margin-top: 10px;
+  width: 100%;
+  padding: 8px;
+  font-size: 0.8rem;
+}

@@ -1,0 +1,29 @@
+.list {
+  padding: 0.8rem 0;
+}
+
+.list__items {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0.8rem 0;
+  flex-wrap: wrap;
+}
+
+.list__item {
+  border-radius: 2rem;
+  text-align: center;
+  padding: 0.6rem 1.5rem;
+  background-color: rgb(184, 183, 183);
+  cursor: pointer;
+}
+
+.list__item--selected {
+  background-color: rgb(36, 36, 246);
+  color: white;
+}
+
+.list__title {
+  display: block;
+  font-size: 1.25rem;
+}

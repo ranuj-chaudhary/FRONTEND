@@ -1,0 +1,12 @@
+.emi-calculator {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.emi-calculator__container {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}

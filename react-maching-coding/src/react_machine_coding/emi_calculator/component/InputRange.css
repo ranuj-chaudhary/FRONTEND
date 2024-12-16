@@ -1,0 +1,22 @@
+.input-range__label {
+  font-style: bold;
+  display: block;
+  margin-top: 10px;
+  font-size: 1.25rem;
+}
+
+.input-range__input {
+  font-style: bold;
+  display: block;
+  margin-top: 10px;
+  font-size: 0.8rem;
+  width: 100%;
+  outline: none;
+}
+.input-range__input::-webkit-slider-thumb {
+  cursor: pointer;
+}
+.input-range__values {
+  display: flex;
+  justify-content: space-between;
+}

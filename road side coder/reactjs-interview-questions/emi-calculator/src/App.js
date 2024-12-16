@@ -54,6 +54,7 @@ export default function App() {
     const emi = calculateEMI(dp);
     setEmi(emi);
   };
+
   const updateDownPayment = (e) => {
     if (!cost) return;
 
