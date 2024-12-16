@@ -9,7 +9,7 @@ function SliderInput({
   onChange,
   labelMin,
   labelMax,
-  underlineTitle
+  underlineTitle,
 }) {
   return (
     <React.Fragment>
@@ -28,11 +28,13 @@ function SliderInput({
           value={state}
           onChange={onChange}
         />
-        <div className="lables">
-          <label>{labelMin ?? numberWithCommas(min)}</label>
-          <b>{numberWithCommas(state)}</b>
-          <label>{labelMax ?? numberWithCommas(max)}</label>
-        </div>
+        {state > 0 && (
+          <div className="lables">
+            <label>{labelMin ?? numberWithCommas(min)}</label>
+            <b>{numberWithCommas(state)}</b>
+            <label>{labelMax ?? numberWithCommas(max)}</label>
+          </div>
+        )}
       </div>
     </React.Fragment>
   );

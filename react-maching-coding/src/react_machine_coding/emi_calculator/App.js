@@ -1,9 +1,10 @@
 import "./App.css";
+import EmiCalculator from "./component/EmiCalculator";
 
 function App() {
   return (
     <div className="App">
-      <p>app</p>
+      <EmiCalculator />
     </div>
   );
 }
