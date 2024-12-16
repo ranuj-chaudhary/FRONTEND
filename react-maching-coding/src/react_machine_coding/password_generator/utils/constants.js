@@ -1,0 +1,3 @@
+const PASSWORD_MAX_LENGTH = 20;
+
+export { PASSWORD_MAX_LENGTH };
