@@ -1,0 +1,13 @@
+.options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 2rem;
+  margin: 1rem 0;
+}
+
+.options__items {
+  display: flex;
+  align-items: center;
+  column-gap: 0.4rem;
+  text-transform: capitalize;
+}

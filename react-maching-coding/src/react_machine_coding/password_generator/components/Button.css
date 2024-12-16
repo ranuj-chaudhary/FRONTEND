@@ -1,0 +1,25 @@
+.btn {
+  color: white;
+  background-color: rgba(5, 165, 214, 0.79);
+  font-weight: 700;
+  border: none;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transform: all 0.3s ease-in;
+}
+
+.btn:active {
+  transform: scale(99%);
+}
+
+.btn--sm {
+  padding: 0.4rem 0.6rem;
+}
+
+.btn--sm:active {
+  transform: scale(97%);
+}
+.btn--lg {
+  padding: 0.8rem 0.8rem;
+  width: 100%;
+}
