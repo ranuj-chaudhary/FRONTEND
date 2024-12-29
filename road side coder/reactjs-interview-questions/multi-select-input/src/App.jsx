@@ -6,9 +6,9 @@ import Pill from "./components/pill";
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
   const [suggestions, setSuggestions] = useState([]);
+  const [activeSuggestion, setActiveSuggestion] = useState(0);
   const [selectedUsers, setSelectedUsers] = useState([]);
   const [selectedUserSet, setSelectedUserSet] = useState(new Set());
-  const [activeSuggestion, setActiveSuggestion] = useState(0);
 
   const inputRef = useRef(null);
 

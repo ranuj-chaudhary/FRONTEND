@@ -1,14 +1,13 @@
 html {
   box-sizing: border-box;
 }
-
 :root {
-  --default-color: #615f5f;
-  --primary-btn-bg: rgb(215, 41, 41);
-  --border-primary-color: rgb(215, 41, 41);
+  --hover-color: green;
+  --bg-color-blk: black;
   --text-white: white;
+  --complete-color: rgb(0, 255, 21);
+  --active-color: rgb(59, 59, 229);
 }
-
 *,
 *::before,
 *::after {
@@ -18,9 +17,6 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: Arial, Helvetica, sans-serif, sans-serif;
   font-size: 62.5%;
-  background-color: #feffce;
 }

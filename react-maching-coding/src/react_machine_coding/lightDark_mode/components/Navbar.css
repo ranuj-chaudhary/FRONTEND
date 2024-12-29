@@ -1,0 +1,23 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  padding: 0.8rem 0.8rem;
+  background-color: yellow;
+  border: 2px solid grey;
+}
+
+.navbar__links {
+  display: flex;
+  gap: 1rem;
+  font-size: 1rem;
+  list-style: none;
+}
+
+.navbar__link {
+  text-decoration: none;
+}
+
+.navbar__link:hover {
+  text-decoration: underline;
+  color: blue;
+}
