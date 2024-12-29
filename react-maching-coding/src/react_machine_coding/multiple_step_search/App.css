@@ -1,0 +1,56 @@
+.app {
+  padding: 2rem;
+}
+
+.multi-search {
+  display: inline flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  gap: 0.4rem;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 0.5rem;
+  min-width: 30rem;
+}
+
+.multi-search__data {
+  position: relative;
+}
+
+.multi-search__suggestions {
+  position: absolute;
+  left: 0;
+  top: 105%;
+  list-style: none;
+  background-color: white;
+  border: 1px solid black;
+  width: 100%;
+  height: 200px;
+  overflow: scroll;
+}
+
+.multi-search__suggestion {
+  margin: 0.2rem 0;
+  font-size: 0.8rem;
+  padding: 0.2rem;
+  cursor: pointer;
+}
+
+.multi-search__suggestion:hover {
+  background-color: rgb(169, 245, 169);
+}
+
+.hidden {
+  display: none;
+}
+
+.multi-search__input {
+  padding: 0.5rem;
+  border: 0.1rem solid green;
+  border-radius: 2rem;
+}
+
+.active {
+  background-color: green;
+}

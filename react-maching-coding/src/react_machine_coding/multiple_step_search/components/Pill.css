@@ -1,0 +1,18 @@
+.pill {
+    background-color: black;
+    color: white;
+    padding: .4rem .4rem;
+    border-radius: 2rem;
+    font-size: .8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .4rem;
+}
+
+.pill__close {
+    background-color: red;
+    padding: .2rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
