@@ -1,0 +1,29 @@
+.countdown-timer {
+  text-align: center;
+}
+
+.countdown-timer__time {
+  margin-left: 5px;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.countdown-timer__actions {
+  display: flex;
+  gap: 20px;
+}
+
+.countdown-timer__btn {
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: rgb(29, 29, 199);
+  color: white;
+  font-size: 1rem;
+  transition: all 100ms ease;
+  cursor: pointer;
+}
+
+.countdown-timer__btn:active {
+  transform: scale(95%);
+}
