@@ -16,7 +16,8 @@ const useCustomEffect = (effect, deps) => {
     ? JSON.stringify(deps) !== JSON.stringify(oldDeps.current)
     : true;
 
-  if (dependencyChange) {
+    if (dependencyChange) {
+    // cleanup;
     const cleanUp = effect();
 
     if (cleanUp && typeof cleanUp === "function" && deps) {
@@ -24,7 +25,6 @@ const useCustomEffect = (effect, deps) => {
     }
   }
 
-  // cleanup;
 
   oldDeps.current = deps || [];
 };

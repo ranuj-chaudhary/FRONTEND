@@ -2,64 +2,25 @@
   padding: 2rem;
   display: flex;
   justify-content: center;
-}
-
-.stepper {
-  width: 50%;
-  padding: 1rem;
-  background-color: rgb(255, 249, 128);
-  border: 2px solid rgb(105, 100, 100);
-}
-.stepper__step.active {
-  background-color: var(--active-color);
-  color: white;
-}
-
-.stepper__step.complete {
-  background-color: var(--complete-color);
-  color: black;
-}
-
-.stepper__step {
-  border: 1px solid black;
-  border-radius: 50%;
-  height: 40px;
-  width: 40px;
-  font-size: 1rem;
-  display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  z-index: 2;
-  background-color: rgb(255, 249, 128);
+  row-gap: 20px;
 }
 
-.steppers__steps {
-  width: 100%;
+.products {
   display: flex;
-  justify-content: space-between;
-  position: relative;
-}
-.steppers__steps .stepper__progress-bar {
-  position: absolute;
-  height: 2px;
-  /* width: 100%; */
-  background-color: gray;
-  top: 50%;
-  z-index: 1;
-  background-color: var(--complete-color);
-}
-.stepper__component {
-  padding-top: 2rem;
-  font-size: 1rem;
-  text-align: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
 }
 
-.stepper__buttons {
-  padding: 1rem;
-  text-align: center;
+.products__card {
+  display: flex;
+  width: 20%;
+  justify-content: center;
+  border: 1px solid black;
 }
 
-.stepper__buttons .btn {
-  padding: 0.4rem 0.6rem;
-  cursor: pointer;
+.products__card p {
+  margin-left: 10px;
 }
