@@ -1,0 +1,30 @@
+.form {
+  display: flex;
+  gap: 20px;
+  border: 2px solid var(--bg-color-blk);
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.form__input-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.form__label {
+  width: 30%;
+}
+.form__input {
+  width: 70%;
+  padding: 0.4rem;
+}
+.form__btn {
+  padding: 12px 16px;
+  font-weight: bold;
+}
+
+.form__error{
+    color: red;
+}
+

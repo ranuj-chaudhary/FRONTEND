@@ -8,7 +8,7 @@ function useDebounce(value, delay = 500) {
       setDebouncedValue(value);
     }, delay);
 
-    // Cleanup function to clear timeout
+    // Cleanup function run on change of dependency
     return () => clearTimeout(handler);
   }, [value, delay]);
 

@@ -1,0 +1,26 @@
+.category {
+  padding: 1rem;
+}
+
+.category__items {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.category__name {
+  border: 2px solid black;
+  padding: 0.4rem;
+  background-color: rgb(46, 46, 243);
+  color: white;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.category__selected {
+  background-color: green;
+  color: white;
+}

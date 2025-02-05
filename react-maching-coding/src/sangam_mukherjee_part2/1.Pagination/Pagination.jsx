@@ -1,4 +1,4 @@
-import "./Pagination.css";
+import './Pagination.css';
 
 const Pagination = ({ currentPage, onChangeData, totalPages }) => {
   function generatePages(totalPages) {
@@ -11,6 +11,22 @@ const Pagination = ({ currentPage, onChangeData, totalPages }) => {
     return pages;
   }
 
+  function renderPages() {
+    return generatePages(totalPages).map((ele, idx) => {
+      return (
+        <button
+          className={`pagination__btn ${
+            currentPage === ele ? 'btn--active' : ''
+          }`}
+          key={ele}
+          onClick={() => onChangeData(ele)}
+        >
+          {ele}
+        </button>
+      );
+    });
+  }
+
   return (
     <div className="pagination">
       <button
@@ -20,20 +36,7 @@ const Pagination = ({ currentPage, onChangeData, totalPages }) => {
       >
         Prev
       </button>
-      {generatePages(totalPages).map((ele, idx) => {
-        console.log(ele)
-        return (
-          <button
-            className={`pagination__btn ${
-              currentPage === ele ? "btn--active" : ""
-            }`}
-            key={ele}
-            onClick={() => onChangeData(ele)}
-          >
-            {ele}
-          </button>
-        );
-      })}
+      {renderPages()}
       <button
         className="pagination__btn pagination__btn--next"
         onClick={() => onChangeData(currentPage + 1)}

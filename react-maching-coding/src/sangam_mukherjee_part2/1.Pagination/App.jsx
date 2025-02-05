@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import "./App.css";
-import Pagination from "./sangam_mukherjee_part2/3.Pagination/Pagination";
+import { useEffect, useState } from 'react';
+import './App.css';
+import Pagination from './sangam_mukherjee_part2/3.Pagination/Pagination';
 
 const PAGES_PER_PAGE = 10;
 
@@ -23,24 +23,26 @@ function App() {
 
   const productsByPages = [...products].slice(startIndex, lastIndex);
 
+  function renderProducts() {
+    if (productsByPages.length > 0) {
+      return productsByPages.map((prod) => {
+        return (
+          <div className="products__card" key={prod.id}>
+            <p>{prod.id}</p>
+            <p>{prod.productName}</p>
+          </div>
+        );
+      });
+    }
+  }
+
   function handleChangeData(idx) {
     setCurrentPage(idx);
   }
 
   return (
     <div className="app">
-      <div className="products">
-        {productsByPages &&
-          productsByPages.length &&
-          productsByPages.map((prod) => {
-            return (
-              <div className="products__card" key={prod.id}>
-                <p>{prod.id}</p>
-                <p>{prod.productName}</p>
-              </div>
-            );
-          })}
-      </div>
+      <div className="products">{renderProducts()}</div>
       <Pagination
         currentPage={currentPage}
         productsPerPage={PAGES_PER_PAGE}

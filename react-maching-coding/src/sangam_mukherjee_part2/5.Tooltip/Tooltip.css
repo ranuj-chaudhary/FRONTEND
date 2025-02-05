@@ -1,0 +1,19 @@
+.tooltip {
+  position: relative;
+  cursor: pointer;
+  width: 100px;
+  font-size: 1rem;
+}
+
+.tooltip__box {
+  position: absolute;
+  font-size: 1rem;
+  bottom: 100%;
+  left: 50%;
+  border: 1px solid black;
+  width: 200px;
+  background-color: black;
+  color: white;
+  padding: 6px;
+  border-radius: 6px;
+}

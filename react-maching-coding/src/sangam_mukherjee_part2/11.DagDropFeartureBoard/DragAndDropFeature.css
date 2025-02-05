@@ -1,0 +1,31 @@
+.drag-drop-board {
+  display: flex;
+  gap: 20px;
+}
+
+.drag-drop-board__inprogress,
+.drag-drop-board__complete {
+  border: 2px solid black;
+  padding: 0.4rem;
+  width: 15rem;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow: auto;
+}
+
+.todo {
+  border: 1px solid black;
+  padding: 0.4rem;
+  font-size: 14px;
+
+  min-height: 50px;
+  cursor: pointer;
+}
+
+.todo p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
