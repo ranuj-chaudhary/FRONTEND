@@ -1,0 +1,25 @@
+.random-quotes {
+  background-color: black;
+  padding: 2rem;
+  height: 200px;
+  border: 1px solid black;
+  position: relative;
+}
+
+.random-quotes:first-child {
+  color: white;
+  font-size: 1rem;
+}
+
+.random-quotes__btn {
+  padding: 6px 12px;
+  background-color: blue;
+  color: white;
+  font-size: 14px;
+  border-radius: 6px;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}

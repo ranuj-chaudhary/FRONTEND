@@ -1,0 +1,50 @@
+.tip-calculator__heading {
+  text-align: center;
+}
+
+.tip-calculator {
+  background-color: rgb(209, 207, 207);
+  width: 25rem;
+  padding: 1rem;
+}
+
+.tip-calculator__input-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.tip-calculator__label {
+  font-size: 1rem;
+  text-transform: capitalize;
+  width: 30%;
+}
+
+.tip-calculator__input {
+  flex: 1;
+  padding: 0.6rem;
+  width: 70%;
+}
+
+.tip-calculator__section {
+  padding: 1rem 0;
+}
+
+.tip-calculator__action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+.btn {
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.tip-calculator__output-value {
+  font-size: 1rem;
+  padding: 0.6rem 0;
+}

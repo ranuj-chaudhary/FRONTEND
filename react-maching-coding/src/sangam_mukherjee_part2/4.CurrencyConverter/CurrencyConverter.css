@@ -1,0 +1,21 @@
+.currency {
+  padding: 10px;
+  border: 1px solid black;
+}
+.currency__heading {
+  text-align: center;
+}
+.currency__input-container {
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.currency__label {
+  font-size: 1rem;
+}
+.currency__input,
+.currency__select {
+  padding: 10px;
+}

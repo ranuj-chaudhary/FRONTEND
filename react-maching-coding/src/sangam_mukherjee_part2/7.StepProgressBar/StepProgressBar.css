@@ -1,0 +1,59 @@
+.step-progress {
+  background-color: yellow;
+  width: 50%;
+  height: 500px;
+  padding: 10px;
+}
+
+.step-progress__steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.step-progress__step {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  padding: 4px;
+  text-align: center;
+  background-color: rgb(222, 217, 217);
+  font-weight: bold;
+}
+
+.step-progress__actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 8px 16px;
+  background-color: rgb(40, 40, 248);
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.step-progress__content {
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.step-progress__content p {
+  font-size: 2rem;
+}
+
+.step-progress__step--active {
+  background-color: green;
+  color: white;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+}
