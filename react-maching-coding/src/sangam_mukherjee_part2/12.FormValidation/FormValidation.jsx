@@ -14,16 +14,16 @@ const FormValidation = () => {
     email: '',
   });
 
-  const errorMessage = {
-    username: 'Username length should be greater than 3',
-    email: 'Enter Valid Email',
-    password: 'Password length should be >5',
-  };
-
   function formValidation(name, value) {
     function testEmail(email) {
       return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     }
+
+    const errorMessage = {
+      username: 'Username length should be greater than 3',
+      email: 'Enter Valid Email',
+      password: 'Password length should be >5',
+    };
 
     let errorValue = '';
     switch (name) {
@@ -42,24 +42,43 @@ const FormValidation = () => {
       default:
         break;
     }
+    return errorValue;
   }
 
   function handleSumbit(e) {
     e.preventDefault();
-    let validateError = [];
-    const isInputValid = Object.entries(formValue);
-    isInputValid.forEach((ele) => {
-      const [name, value] = ele;
 
-      formValidation(name, value);
-    
+    const formInputData = Object.entries(formValue);
+    const validation = [];
+    // loop through all the form inputs to check errors
+    formInputData.forEach((ele) => {
+      const [name, value] = ele;
+      const errorValue = formValidation(name, value);
+      validation.push(errorValue);
     });
-   
+
+    const errors = Object.values(validation);
+    const noError = errors.every((ele) => ele === '');
+
+    if (noError) {
+      console.log('Data sent successfully');
+    } else {
+      console.log('All fields are required, cannot submit the data');
+    }
   }
 
   function handleChange(event) {
     const { name, value } = event.target;
+    const obj = {
+      ...formValue,
+      [name]: value,
+    };
+    setValue(obj);
+    formValidation(name, value);
+  }
 
+  function handleFocus(event) {
+    const { name, value } = event.target;
     const obj = {
       ...formValue,
       [name]: value,
@@ -80,6 +99,7 @@ const FormValidation = () => {
           type="text"
           value={formValue.username}
           onChange={handleChange}
+          onFocus={handleFocus}
           name="username"
         />
         <p className="form__error">
@@ -97,6 +117,7 @@ const FormValidation = () => {
           value={formValue.password}
           onChange={handleChange}
           name="password"
+          onFocus={handleFocus}
         />
         <p className="form__error">
           {error.password.length > 0 ? error.password : ''}
@@ -113,6 +134,7 @@ const FormValidation = () => {
           value={formValue.email}
           onChange={handleChange}
           name="email"
+          onFocus={handleFocus}
         />
         <p className="form__error">{error.email}</p>
       </div>
