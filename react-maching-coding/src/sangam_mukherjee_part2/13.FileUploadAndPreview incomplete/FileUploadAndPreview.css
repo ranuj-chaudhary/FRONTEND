@@ -1,0 +1,19 @@
+.file-upload {
+  margin: 2px solid black;
+
+}
+
+.upload__progress {
+  color: green;
+}
+
+.file-upload__progress{
+    width: 200px;
+    height: 10px;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.upload__complete{
+    color: green;
+}

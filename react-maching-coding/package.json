@@ -2,6 +2,7 @@
   "name": "react-maching-coding",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@react-pdf/renderer": "^4.1.6",
     "cra-template": "1.2.0",

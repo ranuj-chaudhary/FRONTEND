@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 
 const ParentComponent = () => {
   const [count, setCount] = useState({
@@ -13,7 +13,7 @@ const ParentComponent = () => {
   }
   
 
-const handleSquare = useMemo(() => {
+const handleSquare = useCallback(() => {
     console.log('memoized value');
     return count.num * count.num;
   }, [count.num])
@@ -25,7 +25,6 @@ const handleSquare = useMemo(() => {
         <p>{count.num}</p>
         <button onClick={() => handleChangeCount('decrement')}>-</button>
       </div>
-
       <Child handleSquare={handleSquare} setShow={setShow} />
     </div>
   );

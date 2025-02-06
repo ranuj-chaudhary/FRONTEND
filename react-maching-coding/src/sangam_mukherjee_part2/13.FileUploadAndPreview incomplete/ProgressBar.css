@@ -1,0 +1,35 @@
+.progress-wrapper {
+  height: 100%;
+  width: 200px;
+  background-color: rgb(161, 159, 159);
+  border-radius: inherit;
+  position: relative;
+  margin: 10px;
+}
+
+.progress {
+  width: 10%;
+  height: 100%;
+  background-color: green;
+  position: absolute;
+  border-radius: inherit;
+}
+
+.progress {
+  width: 10%;
+  height: 100%;
+  background-color: green;
+  position: absolute;
+}
+
+.progress__percent {
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 100%;
+  transition: width .3s ease .3s;
+}
+.progress__complete {
+    margin: 10px 0;
+}
