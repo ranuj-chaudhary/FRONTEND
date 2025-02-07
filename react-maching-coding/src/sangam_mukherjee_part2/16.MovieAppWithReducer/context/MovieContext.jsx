@@ -5,57 +5,32 @@ import {
   useReducer,
   useState,
 } from 'react';
-import useDebounce from '../hooks/useDebounce';
 
+// types
+import {
+  ADD_WATCHED,
+  ADD_WATCHLIST,
+  DELETE_WATCHED,
+  DELETE_WATCHLIST,
+} from './types.mjs';
+
+// custom hook
+import useDebounce from '../hooks/useDebounce';
+import movieReducer from './reducer.js';
+
+// api key and token
 const BEARER_TOKEN =
   'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5OTYxZDM5NDAxOGU1Y2M4NjgxMDE3NjUzMDk2NmZjMyIsIm5iZiI6MTczODg1MzYwOC42NjksInN1YiI6IjY3YTRjY2U4NDUwMWIyZjIzMzY2ZWFjMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Uwm0Vnivpr-Xt4FfxpiRuNd_lor_pFsYYlNetZGy5rE';
-// const API_KEY = '9961d394018e5cc86810176530966fc3';
 
-const ADD_WATCHLIST = 'ADD_WATCHLIST';
-const DELETE_WATCHLIST = 'DELETE_WATCHLIST';
-const ADD_WATCHED = 'ADD_WATCHED';
-const DELETE_WATCHED = 'DELETE_WATCHED';
-
+// 1) CREATE MOVIE CONTEXT
 const MovieContext = createContext(null);
 
 const initialState = {
-  watchlist: [],
-  watched: [],
+  watchlist: JSON.parse(localStorage.getItem('watchlist')) || [],
+  watched: JSON.parse(localStorage.getItem('watched')) || [],
 };
 
-const movieReducer = function (state, action) {
-  console.log(action)
-  switch (action.type) {
-    case ADD_WATCHLIST:
-      return {
-        ...state,
-        watchlist: [...state.watchlist, action.payload],
-      };
-    case DELETE_WATCHLIST:
-      return {
-        ...state,
-        watchlist: [
-          ...state.watchlist.filter((movie) => movie.id !== action.payload.id),
-        ],
-      };
-    case ADD_WATCHED:
-      return {
-        ...state,
-        watched: [...state.watched, action.payload],
-      };
-    case DELETE_WATCHED:
-      return {
-        ...state,
-        watched: [
-          ...state.watched.filter((movie) => movie.id !== action.payload.id),
-        ],
-      };
-
-    default:
-      return state;
-  }
-};
-
+// 2) Movie Context Provider
 function MovieProvider({ children }) {
   const [movieList, setMovieList] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -63,12 +38,8 @@ function MovieProvider({ children }) {
   const [queryParams, setQueryParams] = useState('');
 
   const useDebounceParamSearch = useDebounce(queryParams, 500);
-  console.log(useDebounceParamSearch);
 
-  const [{ watched, watchlist }, dispatch] = useReducer(
-    movieReducer,
-    initialState
-  );
+  const [state, dispatch] = useReducer(movieReducer, initialState);
 
   useEffect(() => {
     const options = {
@@ -106,28 +77,45 @@ function MovieProvider({ children }) {
     })();
   }, [useDebounceParamSearch]);
 
+  // set local storage
+  useEffect(() => {
+    localStorage.setItem('watchlist', JSON.stringify(state.watchlist));
+    localStorage.setItem('watched', JSON.stringify(state.watched));
+  }, [state]);
+
   function handleAddWatchlist(movie) {
-    dispatch({ type: ADD_WATCHLIST, payload: movie });
+    const index = state.watchlist.findIndex((ele) => ele.id === movie.id);
+    if (index === -1) {
+      dispatch({ type: ADD_WATCHLIST, payload: movie });
+    } else {
+      alert(`Movie exist in watchlist`);
+    }
   }
+
   function handleDeleteWatchlist(id) {
     dispatch({ type: DELETE_WATCHLIST, payload: { id } });
   }
 
   function handleAddWatched(movie) {
-    dispatch({ type: ADD_WATCHED, payload: movie });
+    const index = state.watched.findIndex((ele) => ele.id === movie.id);
+    if (index === -1) {
+      dispatch({ type: ADD_WATCHED, payload: movie });
+    } else {
+      alert(`Movie exist in watched list`);
+    }
   }
 
   function handleDeleteWatched(id) {
     dispatch({ type: DELETE_WATCHED, payload: { id } });
   }
 
-  function handleMoveToWatched(movie, id){
-    handleAddWatched(movie)
-    handleDeleteWatchlist(id)
+  function handleMoveToWatched(movie, id) {
+    handleAddWatched(movie);
+    handleDeleteWatchlist(id);
   }
-  function handleMoveToWatchList(movie, id){
-    handleAddWatchlist(movie)
-    handleDeleteWatched(id)
+  function handleMoveToWatchList(movie, id) {
+    handleAddWatchlist(movie);
+    handleDeleteWatched(id);
   }
   return (
     <MovieContext.Provider
@@ -135,8 +123,7 @@ function MovieProvider({ children }) {
         movieList,
         loading,
         error,
-        watchlist,
-        watched,
+        state,
         handleAddWatchlist,
         handleDeleteWatchlist,
         handleAddWatched,
@@ -144,19 +131,18 @@ function MovieProvider({ children }) {
         queryParams,
         setQueryParams,
         handleMoveToWatched,
-        handleMoveToWatchList
-
+        handleMoveToWatchList,
       }}
     >
       {children}
     </MovieContext.Provider>
   );
 }
-
+// 3) Custom Hook for context
 function useMovieContext() {
   const context = useContext(MovieContext);
   if (!context) {
-    throw Error('context not found');
+    throw Error('Context in outside the MovieContext Provider.');
   }
   return context;
 }

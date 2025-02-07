@@ -1,0 +1,4 @@
+export const ADD_WATCHLIST = 'ADD_WATCHLIST';
+export const DELETE_WATCHLIST = 'DELETE_WATCHLIST';
+export const ADD_WATCHED = 'ADD_WATCHED';
+export const DELETE_WATCHED = 'DELETE_WATCHED';

@@ -1,0 +1,15 @@
+.movie__search {
+  display: flex;
+  justify-content: center;
+}
+
+.movie__input {
+  width: 40%;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.movie__input:focus {
+  outline-color: purple;
+}

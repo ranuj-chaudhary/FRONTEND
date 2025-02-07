@@ -1,44 +1,28 @@
 import React from 'react';
-import './MovieApp.css';
+
+// custom hooks
 import { useMovieContext } from './context/MovieContext';
-import MovieList from './MovieList';
+
+// components
 import WatchedList from './WatchedList';
 import WatchList from './WatchList';
 import MovieSearchList from './MovieSearchList';
-const MovieApp = () => {
-  const {
-    movieList,
-    loading,
-    error,
-    watchlist,
-    watched,
-    handleAddWatchlist,
-    handleDeleteWatchlist,
-    handleAddWatched,
-    handleDeleteWatched,
-    queryParams,
-    setQueryParams,
-  } = useMovieContext();
+import MovieSearchBar from './MovieSearchBar';
 
+// css
+import './MovieApp.css';
+
+const MovieApp = () => {
+  const { movieList, queryParams, setQueryParams, state } = useMovieContext();
+  console.log(state);
   return (
     <div className="movie">
       <h1>Searched Movie list</h1>
-      <div className="movie__search">
-        <input
-          className="movie__input"
-          type="text"
-          value={queryParams}
-          onChange={(e) => {
-            setQueryParams(e.target.value);
-          }}
-          name="search"
-        />
-        <button>Search</button>
-      </div>
+      <MovieSearchBar query={queryParams} setState={setQueryParams} />
       <div className="movie__container">
         <MovieSearchList movieList={movieList} />
-        <WatchList watchlistMovies={watchlist} />
-        <WatchedList watchedMovies={watched} />
+        <WatchList watchlistMovies={state.watchlist} />
+        <WatchedList watchedMovies={state.watched} />
       </div>
     </div>
   );

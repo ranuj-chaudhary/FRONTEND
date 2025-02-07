@@ -6,6 +6,7 @@ import './App.css';
 // import FileUploadAndPreview from './sangam_mukherjee_part2/13.FileUploadAndPreview incomplete/FileUploadAndPreview';
 // import TodoFirebase from './sangam_mukherjee_part2/15.TodoFirebase/TodoFirebase';
 import MovieApp from './sangam_mukherjee_part2/16.MovieAppWithReducer/MovieApp';
+// import GoogleOAuthLogin from './sangam_mukherjee_part2/17.GoogleAuth/GoogleOAuthLogin';
 function App() {
   return (
     <div className="app">
@@ -17,6 +18,7 @@ function App() {
         {/* <ParentComponent /> */}
         {/* <TodoFirebase /> */}
         <MovieApp />
+        {/* <GoogleOAuthLogin /> */}
       </div>
     </div>
   );
