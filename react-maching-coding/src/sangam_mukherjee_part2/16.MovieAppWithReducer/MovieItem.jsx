@@ -1,26 +1,18 @@
 import React from 'react';
 import './MovieItem.css';
-import { useMovieContext } from './context/MovieContext';
+
 const MovieItem = ({ movie, type }) => {
   const { original_title: title, id } = movie;
-  const {
-    handleAddWatchlist,
-    handleDeleteWatchlist,
-    handleAddWatched,
-    handleDeleteWatched,
-    handleMoveToWatched,
-    handleMoveToWatchList,
-  } = useMovieContext();
 
   if (type === 'searchList') {
     return (
       <div className="movie__item">
         <p>{title}</p>
         <div className="movie__actions">
-          <button onClick={() => handleAddWatchlist(movie)}>
+          <button data-id={`${id}`} id="add-watchlist">
             Add To WatchList
-          </button>{' '}
-          <button onClick={() => handleAddWatched(movie)}>
+          </button>
+          <button data-id={`${id}`} id="add-watched">
             Add To Watched
           </button>
         </div>
@@ -32,10 +24,10 @@ const MovieItem = ({ movie, type }) => {
       <div className="movie__item">
         <p>{title}</p>
         <div className="movie__actions">
-          <button onClick={() => handleDeleteWatchlist(id)}>
+          <button data-id={`${id}`} id="delete-watchlist">
             Remove WatchList
           </button>
-          <button onClick={() => handleMoveToWatched(movie, id)}>
+          <button data-id={`${id}`} id="moveto-watched">
             Move To Watched
           </button>
         </div>
@@ -47,10 +39,10 @@ const MovieItem = ({ movie, type }) => {
       <div className="movie__item">
         <p>{title}</p>
         <div className="movie__actions">
-          <button onClick={() => handleDeleteWatched(id)}>
+          <button data-id={`${id}`} id="delete-watched">
             Remove Watched
-          </button>{' '}
-          <button onClick={() => handleMoveToWatchList(movie, id)}>
+          </button>
+          <button data-id={`${id}`} id="moveto-watchlist">
             Move To WatchList
           </button>
         </div>
