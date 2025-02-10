@@ -2,11 +2,29 @@ html {
   box-sizing: border-box;
 }
 :root {
-  --hover-color: green;
-  --bg-color-blk: black;
-  --text-white: white;
-  --complete-color: rgb(0, 255, 21);
-  --active-color: rgb(59, 59, 229);
+  --text-primary: #000000;
+  --background: #ffffff;
+  --button-bg: #ffffff;
+  --button-text: #000000;
+}
+
+[data-theme='dark'] {
+  --text-primary: #ffffff;
+  --background: #000000;
+  --button-bg: #000000;
+  --button-text: #ffffff;
+}
+
+.light-dark-theme {
+  color: var(--text-primary);
+  background-color: var(--background);
+  transition: all .5s;
+}
+
+.btn {
+  color: var(--button-text);
+  background-color: var(--button-bg);
+  padding: 10px;
 }
 
 *,

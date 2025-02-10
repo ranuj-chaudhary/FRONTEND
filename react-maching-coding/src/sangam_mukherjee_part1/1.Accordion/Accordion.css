@@ -1,0 +1,16 @@
+.accordion,
+.accordion_container {
+  padding: 10px;
+}
+.accordion_container {
+    border: 2px solid black;
+}
+
+.accordion__title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+button{
+    padding: 5px 5px;
+}

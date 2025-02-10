@@ -1,0 +1,8 @@
+.children_menu {
+  margin-left: 20px;
+}
+
+.menu-name {
+  display: flex;
+  gap: 20px;
+}
