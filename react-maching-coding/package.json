@@ -6,10 +6,13 @@
   "dependencies": {
     "@react-oauth/google": "^0.12.1",
     "@react-pdf/renderer": "^4.1.6",
+    "axios": "^1.7.9",
     "cra-template": "1.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-error-boundary": "^5.0.0",
+    "react-icons": "^5.4.0",
+    "react-qr-code": "^2.0.15",
     "react-router-dom": "^7.1.1",
     "react-scripts": "5.0.1",
     "uuid": "^11.0.3"

@@ -1,24 +1,32 @@
+import { useEffect, useState } from 'react';
 import './App.css';
-// import PdfViewer from './sangam_mukherjee_part2/14.PdfViewer/PdfViewer';
-// import FormValidation from './sangam_mukherjee_part2/12.FormValidation incomplete/FormValidation';
-// import ScrollTracker from './react_machine_coding/useThrottle/ScrollTracker';
-// import ParentComponent from './react-hooks/useCallBack';
-// import FileUploadAndPreview from './sangam_mukherjee_part2/13.FileUploadAndPreview incomplete/FileUploadAndPreview';
-// import TodoFirebase from './sangam_mukherjee_part2/15.TodoFirebase/TodoFirebase';
-import MovieApp from './sangam_mukherjee_part2/16.MovieAppWithReducer/MovieApp';
-// import GoogleOAuthLogin from './sangam_mukherjee_part2/17.GoogleAuth/GoogleOAuthLogin';
+import axios from 'axios';
+// import LightDarkTheme from './sangam_mukherjee_part1/8.LightDarkTheme/LightDark';
+// import Accordion from './sangam_mukherjee_part1/1.Accordion/Accordion';
+// import RandomColorGenerator from './sangam_mukherjee_part1/2.RandomColorGenerator/RandomColorGenerator';
+// import StartRating from './sangam_mukherjee_part1/3.StarRating/StartRating';
+// import ImageSlider from './sangam_mukherjee_part1/4.ImageSlider/ImageSlider';
+import LoadMoreProducts from './sangam_mukherjee_part1/5.LoadMoreButton/LoadMoreButton';
+// import menus from './sangam_mukherjee_part1/6.Tree View_DynamicNavigation_RecursiveMenu/data';
+// import DynamicRecursiveTreeMenu from './sangam_mukherjee_part1/6.Tree View_DynamicNavigation_RecursiveMenu/DynamicRecursiveTreeMenu';
+// import QrGenerator from './sangam_mukherjee_part1/7.QrGenerator/QrGenerator';
 function App() {
   return (
     <div className="app">
       <div className="app">
-        {/* <FormValidation /> */}
-        {/* <FileUploadAndPreview /> */}
-        {/* <PdfViewer /> */}
-        {/* <ScrollTracker /> */}
-        {/* <ParentComponent /> */}
-        {/* <TodoFirebase /> */}
-        <MovieApp />
-        {/* <GoogleOAuthLogin /> */}
+        {/* <Accordion /> */}
+        {/* <RandomColorGenerator /> */}
+        {/*         
+          <StartRating
+            rating={rating}
+            setRating={setRating}
+            noOfStars={5}
+            setIsRated={setIsRated}
+          /> */}
+        {/* <ImageSlider url={'https://picsum.photos/v2/list'} /> */}
+        <LoadMoreProducts url={'https://dummyjson.com/products/'} />
+        {/* <DynamicRecursiveTreeMenu listitem={menus} /> */}
+        {/* <LightDarkTheme defaultTheme="light" /> */}
       </div>
     </div>
   );
