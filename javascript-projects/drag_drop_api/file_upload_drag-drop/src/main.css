@@ -1,0 +1,32 @@
+.drag-zone {
+  width: 200px;
+  height: 200px;
+  border: 2px dashed blue;
+  border-radius: 8px;
+  position: relative;
+  padding: 10px;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.drag-zone img {
+  display: block;
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+.drag-zone--active {
+  border-style: solid;
+}
+.drag-zone__input--hidden {
+  display: none;
+}
+
+.input {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)"> -->
+    <!-- <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)"> -->
+    <meta name="supported-color-schemes" content="light dark" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="src/main.css" />
+  </head>
+  <body>
+    <input type="file" multiple onchange="handleMultipleFiles(event)" />
+    <button onclick="displayStoredFiles()">Show Stored Files</button>
+    <div id="filePreview"></div>
+
+    <!-- <script src="pract.js" defer></script> -->
+    <script src="src/main.js" defer></script>
+  </body>
+</html>

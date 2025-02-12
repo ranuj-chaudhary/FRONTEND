@@ -14,7 +14,7 @@ import './MovieApp.css';
 
 const MovieApp = () => {
   const { movieList, queryParams, setQueryParams, state } = useMovieContext();
-  console.log(state);
+ 
   return (
     <div className="movie">
       <h1>Searched Movie list</h1>
