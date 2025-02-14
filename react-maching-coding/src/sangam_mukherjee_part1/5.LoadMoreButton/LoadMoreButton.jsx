@@ -64,7 +64,7 @@ const LoadMoreProducts = ({ url, limit = 20 }) => {
       </div>
     );
   }
-  console.log(products);
+  
   return (
     <div className="products">
       <div className="products__items">
