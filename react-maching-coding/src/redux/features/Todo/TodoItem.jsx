@@ -8,7 +8,7 @@ const TodoItem = ({ todo }) => {
   const loading = useSelector((state) => state.loading);
   return (
     <div key={todo.id} style={{ border: '2px solid black' }}>
-      {loading ? <p>Encripting data Please wait...</p> : <p>{todo.content}</p>}
+      {loading ? <p>Encripting data Please wait...</p> : <p>{todo.todo}</p>}
       <button onClick={() => dispatch(todoDeleted({ id: todo.id }))}>
         Delete Todo
       </button>

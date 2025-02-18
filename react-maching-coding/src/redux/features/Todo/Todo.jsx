@@ -1,10 +1,10 @@
 // hooks
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 // actions
 import { todoRecieved } from './TodoSlice';
-
+import { fetchUsers } from './TodoSlice';
 // components
 import TodoItem from './TodoItem';
 
@@ -24,7 +24,7 @@ function Todo() {
     dispatch(
       todoRecieved({
         id: uuidv4(),
-        content: content,
+        todo: content,
       })
     );
   }
@@ -47,6 +47,7 @@ function Todo() {
         />
         <button type="submit">Add Todo</button>
       </form>
+      <button onClick={() => dispatch(fetchUsers())}>Fetch Todo</button>
       {todos && todos.length > 0
         ? todos.map((todo) => <TodoItem key={todo.id} todo={todo} />)
         : null}
