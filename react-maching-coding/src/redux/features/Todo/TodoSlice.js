@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { encryptData } from './services/todoApi';
-
+import axios from 'axios';
 export const encryptTodoByIdAsyncThunk = createAsyncThunk(
   'todos/todoEncrypted',
   async function (id, { dispatch, getState }) {
@@ -14,8 +14,8 @@ export const encryptTodoByIdAsyncThunk = createAsyncThunk(
         throw new Error('no currenttodo found');
       }
       // 1 Encript data
-      const encriptedData = await encryptData(currentTodo.content);
-      console.log(encriptedData);
+      const encriptedData = await encryptData(currentTodo.todo);
+
       // 2 Dipatch action with encripted todo
       dispatch(todoEncrypted(currentTodo.id, encriptedData));
 
@@ -28,6 +28,20 @@ export const encryptTodoByIdAsyncThunk = createAsyncThunk(
   }
 );
 
+export const fetchUsers = createAsyncThunk(
+  'todos/fetchusers',
+  async function (_, { dispatch, getState }) {
+    console.log('clicked');
+    try {
+      const { data } = await axios.get('https://dummyjson.com/todos');
+      dispatch(setFetchedTodos(data.todos));
+      return data.todos;
+    } catch (error) {
+      dispatch(todoError(error));
+    }
+  }
+);
+
 const todosSlice = createSlice({
   name: 'todos',
   initialState: {
@@ -36,8 +50,12 @@ const todosSlice = createSlice({
     todos: [],
     loading: '',
     error: '',
+    status: 'idle',
   },
   reducers: {
+    setFetchedTodos(state, action) {
+      state.todos = action.payload;
+    },
     todoRecieved(state, action) {
       state.todos.push(action.payload);
     },
@@ -70,6 +88,20 @@ const todosSlice = createSlice({
       },
     },
   },
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchUsers.pending, (state) => {
+        state.status = 'loading';
+      })
+      .addCase(fetchUsers.fulfilled, (state, action) => {
+        state.status = 'succeeded';
+        // state.users = action.payload;
+      })
+      .addCase(fetchUsers.rejected, (state, action) => {
+        state.status = 'failed';
+        state.error = action.error.message;
+      });
+  },
 });
 
 export const {
@@ -78,6 +110,7 @@ export const {
   todoLoading,
   todoError,
   todoEncrypted,
+  setFetchedTodos,
 } = todosSlice.actions;
 
 export default todosSlice.reducer;
