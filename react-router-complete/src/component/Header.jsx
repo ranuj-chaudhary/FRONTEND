@@ -20,6 +20,11 @@ const Header = () => {
           </Link>
         </li>
         <li>
+          <Link className="cursor-pointer hover:text-blue-500" to="/redirects">
+            Redirects
+          </Link>
+        </li>
+        <li>
           <Link
             className="cursor-pointer hover:text-blue-500"
             to={{

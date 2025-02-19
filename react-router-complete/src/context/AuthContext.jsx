@@ -61,6 +61,12 @@ export const authError = function (error) {
     payload: error,
   };
 };
+export const authStatus = function (status) {
+  return {
+    type: AUTH_STATUS,
+    payload: status,
+  };
+};
 export const logout = function (logout) {
   return {
     type: AUTH_LOGOUT,

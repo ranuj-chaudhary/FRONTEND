@@ -1,48 +1,76 @@
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { useAuthContext } from '../context/AuthContext';
 import { useEffect, useState } from 'react';
-import { authLogin, authError } from '../context/AuthContext';
+import { authLogin, authError, authStatus } from '../context/AuthContext';
 import { validateUser } from '../services/loginApi';
+
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const { dispatch, isAuthenticated, error } = useAuthContext();
+  const { dispatch, isAuthenticated, error, status } = useAuthContext();
   const navigate = useNavigate();
   const location = useLocation();
+  console.log(location);
+
   useEffect(() => {
     if (isAuthenticated)
       navigate(
-        location.state?.from || '/dashboard',
+        location?.state?.from || '/dashboard',
         { state: { auth: isAuthenticated } },
         { replace: true }
       );
   }, [isAuthenticated]);
 
-  async function fetchUserAuth() {
-    try {
-      const authStatus = await validateUser(username, password);
+  useEffect(() => {
+    if (error.length > 0) {
+      setTimeout(() => {
+        dispatch(authError(''));
+      }, 2000);
+    }
+  }, [error]);
 
-      if (authStatus && authStatus.isAuthenticated) {
-        dispatch(authLogin(authStatus.isAuthenticated));
-      } else {
-        throw new Error('Authentication failed');
+  async function fetchUserAuth(username, password) {
+    try {
+      dispatch(authError(''));
+      dispatch(authStatus(''));
+      const authValidation = await validateUser(username, password);
+
+      if (authValidation && authValidation.isAuthenticated) {
+        dispatch(authStatus('Validation Successfull'));
+        await new Promise((resolve) => {
+          setTimeout(() => {
+            resolve();
+          }, 1000);
+        });
+        dispatch(authLogin(authValidation.isAuthenticated));
       }
     } catch (error) {
-      dispatch(authError(error.message));
+      setUsername('');
+      setPassword('');
+      throw error;
     }
   }
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
-    if (username && password) {
-      fetchUserAuth();
-    }
+
+    fetchUserAuth(username, password).catch((error) => {
+      dispatch(authError(error));
+    });
   }
 
   return (
     <div className="m-2">
-      <h1>Login form</h1>
-      <form onSubmit={(e) => handleSubmit(e)} className="flex flex-col gap-2">
+      <div className="header flex justify-between">
+        <p className="text-3xl">Login form</p>
+        <p className="font-bold">
+          {location?.state?.message > 0 ? location.state.message : null}
+        </p>
+      </div>
+      <form
+        onSubmit={(e) => handleSubmit(e)}
+        className="flex flex-col gap-2 my-4"
+      >
         <label htmlFor="username">Username</label>
         <input
           className="border-2 border-white p-2"
@@ -52,6 +80,7 @@ const Login = () => {
           placeholder="enter your username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+          required
         />
         <label htmlFor="password">Password</label>
         <input
@@ -62,14 +91,21 @@ const Login = () => {
           placeholder="enter your password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          required
         />
+        <div className="h-8">
+          {error.length > 0 ? (
+            <p className="py-2 text-white">{error}</p>
+          ) : (
+            <p className="py-2 text-white">{status}</p>
+          )}
+        </div>
         <button
           type="submit"
-          className="px-1 py-1 text-black bg-amber-600 font-bold"
+          className="px-1 py-1 text-black bg-amber-600 font-bold cursor-pointer transition-all active:scale-95"
         >
           Submit
         </button>
-        <p>{location?.state?.message ? location.state.message : null}</p>
       </form>
     </div>
   );
