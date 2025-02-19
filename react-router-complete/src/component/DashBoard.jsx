@@ -1,11 +1,19 @@
 import { Link, useLocation } from 'react-router-dom';
 import { Outlet } from 'react-router-dom';
-import { logout, useAuthContext } from '../context/AuthContext';
+import {
+  authError,
+  authStatus,
+  logout,
+  useAuthContext,
+} from '../context/AuthContext';
 const DashBoard = () => {
   const location = useLocation();
-  const { dispatch } = useAuthContext();
+  const { dispatch, status, error } = useAuthContext();
+
   function handleLogout() {
     dispatch(logout(false));
+    dispatch(authError(''));
+    dispatch(authStatus(''));
   }
   return (
     <div className="flex flex-col text-white p-4">
