@@ -37,7 +37,7 @@ function App() {
               </ProtectedRoute>
             }
           >
-            {/* <Route path="form" element={<Form />} /> */}
+            <Route path="form" element={<Form />} />
           </Route>
         </Route>
       </Routes>
