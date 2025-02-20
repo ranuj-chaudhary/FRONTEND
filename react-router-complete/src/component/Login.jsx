@@ -10,7 +10,6 @@ const Login = () => {
   const { dispatch, isAuthenticated, error, status } = useAuthContext();
   const navigate = useNavigate();
   const location = useLocation();
-  console.log(location);
 
   useEffect(() => {
     if (isAuthenticated)

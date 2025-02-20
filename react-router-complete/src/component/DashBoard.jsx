@@ -8,25 +8,13 @@ import {
 } from '../context/AuthContext';
 const DashBoard = () => {
   const location = useLocation();
-  const { dispatch, status, error } = useAuthContext();
-
-  function handleLogout() {
-    dispatch(logout(false));
-    dispatch(authError(''));
-    dispatch(authStatus(''));
-  }
+  
   return (
     <div className="flex flex-col text-white p-4">
       <h1 className="text-4xl">Dashboard</h1>
       <div className="flex justify-between">
         <p>{location?.state?.auth ? 'Login Successfull' : null}</p>
-        <button
-          className="p-2 bg-blue-600 text-white rounded-sm cursor-pointer"
-          onClick={handleLogout}
-        >
-          Logout
-        </button>
-      </div>
+        </div>
 
       <div>
         <Link to="/dashboard/form" className="text-blue underline">

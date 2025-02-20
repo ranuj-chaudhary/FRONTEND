@@ -10,10 +10,10 @@ const ScrollIndiator = () => {
 
   useEffect(() => {
     function handleProgressPercent(e) {
-      const scrollHeight = document.documentElement.scrollHeight;
       const scrollTopBody = document.documentElement.scrollTop;
+
+      const scrollHeight = document.documentElement.scrollHeight;
       const clientHeight = document.documentElement.clientHeight;
-      console.log(scrollHeight - clientHeight);
       const scrolledPercent = Math.floor(
         (scrollTopBody / (scrollHeight - clientHeight)) * 100
       );
@@ -25,14 +25,6 @@ const ScrollIndiator = () => {
       window.removeEventListener('scroll', handleProgressPercent);
     };
   }, [progressPercent]);
-
-  // console.log(window.innerHeight);
-  // console.log(
-  //   'scroll scrolltop documentElement ' + document.documentElement.scrollTop
-  // );
-  // console.log('scroll top body' + document.body.scrollTop);
-  // console.log('scroll clientHeigth ' + document.documentElement.clientHeight);
-  // console.log('scroll scrollHeight ' + document.documentElement.scrollHeight);
 
   return (
     <>
