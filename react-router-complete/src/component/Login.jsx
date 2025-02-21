@@ -4,6 +4,12 @@ import { useEffect, useState } from 'react';
 import { authLogin, authError, authStatus } from '../context/AuthContext';
 import { validateUser } from '../services/loginApi';
 
+const style = {
+  button:
+    'px-1 py-1 text-black bg-amber-600 font-bold cursor-pointer transition-all active:scale-95',
+  input: 'border-2 border-white p-2 border-2 border-white p-2',
+};
+
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -72,7 +78,7 @@ const Login = () => {
       >
         <label htmlFor="username">Username</label>
         <input
-          className="border-2 border-white p-2"
+          className={style.input}
           type="text"
           id="username"
           name="username"
@@ -83,7 +89,7 @@ const Login = () => {
         />
         <label htmlFor="password">Password</label>
         <input
-          className="border-2 border-white p-2"
+          className={style.input}
           type="text"
           id="password"
           name="password"
@@ -99,10 +105,7 @@ const Login = () => {
             <p className="py-2 text-white">{status}</p>
           )}
         </div>
-        <button
-          type="submit"
-          className="px-1 py-1 text-black bg-amber-600 font-bold cursor-pointer transition-all active:scale-95"
-        >
+        <button type="submit" className={style.button}>
           Submit
         </button>
       </form>

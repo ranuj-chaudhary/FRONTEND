@@ -1,11 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { Outlet } from 'react-router-dom';
-import {
-  authError,
-  authStatus,
-  logout,
-  useAuthContext,
-} from '../context/AuthContext';
+
 const DashBoard = () => {
   const location = useLocation();
   
