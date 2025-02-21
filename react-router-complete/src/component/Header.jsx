@@ -25,6 +25,11 @@ const Header = () => {
           </Link>
         </li>
         <li>
+          <Link className="cursor-pointer hover:text-blue-500" to="/sidebar">
+            Transition Animation
+          </Link>
+        </li>
+        <li>
           <Link className="cursor-pointer hover:text-blue-500" to="/contact">
             Contact
           </Link>
