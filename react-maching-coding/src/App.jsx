@@ -1,5 +1,6 @@
 import './App.css';
-import AutoSearch from './sangam_mukherjee_part1/13.SearchAutoWithApi.js/AutoSearch';
+import TicTacToe from './sangam_mukherjee_part1/14.TicTacToe/TicTacToe';
+// import AutoSearch from './sangam_mukherjee_part1/13.SearchAutoWithApi.js/AutoSearch';
 // import LightDarkTheme from './sangam_mukherjee_part1/8.LightDarkTheme/LightDark';
 // import Accordion from './sangam_mukherjee_part1/1.Accordion/Accordion';
 // import RandomColorGenerator from './sangam_mukherjee_part1/2.RandomColorGenerator/RandomColorGenerator';
@@ -41,7 +42,8 @@ function App() {
            <ModalContent/>
           </Modal> */}
           {/* <GiHubProfileSearch /> */}
-          <AutoSearch />
+          {/* <AutoSearch /> */}
+          <TicTacToe />
         </div>
       </div>
     </>
