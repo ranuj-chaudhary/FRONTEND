@@ -1,7 +1,6 @@
-import { tab } from '@testing-library/user-event/dist/tab';
 import React, { useState } from 'react';
 
-const CustomTabs = ({ tabContents, onChange }) => {
+const CustomTabs = ({ tabContents, onChange = () => {} }) => {
   const [currentIndex, setCurrentIndex] = useState(null);
   function handleCurrentIndex(currIdx) {
     setCurrentIndex(currIdx);

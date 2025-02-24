@@ -1,8 +1,15 @@
 import React, { useState } from 'react';
 import { checkColumns, checkDiagonals, checkRows } from './helpers';
+import { typeImplementation } from '@testing-library/user-event/dist/type/typeImplementation';
 
 const style = {
   box: 'border-2 border-black w-32 h-32 flex justify-center items-center text-4xl',
+  winner:
+    'winner fixed w-full h-full flex justify-center items-center bg-black bg-opacity-50 text-white text-3x',
+  ticTacToe:
+    'tictactoe w-full h-full flex justify-center items-center flex-col gap-10 relative',
+  ticTacToeContainer:
+    'tictacktoe__container w-96 h-96 bg-yellow-600 flex flex-wrap',
 };
 
 const TicTacToe = () => {
@@ -50,15 +57,16 @@ const TicTacToe = () => {
       checkRows(turns, currentPlayer),
       checkDiagonals(turns, currentPlayer),
     ];
-    console.log(winner);
+
     const isWinnerExist = winner.some(
       (ele) => ele.currentPlayer === currentPlayer
     );
     if (isWinnerExist) {
       setStatus(`winner is ${currentPlayer}`);
+
       //5) Set Winning Patterns
       const winnerPlayer = winner.find((ele) => ele !== false);
-      console.log(winnerPlayer);
+
       if (winnerPlayer) {
         const coords = winnerPlayer.coords.map(
           (ele) => String(ele.row) + String(ele.col)
@@ -85,8 +93,8 @@ const TicTacToe = () => {
   }
 
   return (
-    <div className="tictactoe w-full h-full flex justify-center items-center flex-col gap-10 relative">
-      <div className="tictacktoe__container w-96 h-96 bg-yellow-600 flex flex-wrap">
+    <div className={style.ticTacToe}>
+      <div className={style.ticTacToeContainer}>
         {turns.map((ele, idx) =>
           ele.map((ele, idx2) => (
             <button
@@ -108,10 +116,7 @@ const TicTacToe = () => {
         <p>{`${currentPlayer} Player Turn`}</p>
       </div>
       {status.length > 0 && (
-        <div
-          onClick={handleToggle}
-          className="winner fixed w-full h-full flex justify-center items-center bg-black bg-opacity-50 text-white text-3xl"
-        >
+        <div onClick={handleToggle} className={style.winner}>
           <p>{status}</p>
         </div>
       )}

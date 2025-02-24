@@ -22,8 +22,7 @@ export function checkRows(turns, currentPlayer) {
       });
     }
     const isWinner = rowTurns.every((ele) => ele.value === currentPlayer);
-    console.log(rowTurns);
-    console.log(isWinner);
+    
     if (isWinner) {
       const coords = rowTurns.map((ele) => ele.indices);
       return { currentPlayer, coords };
