@@ -1,3 +1,6 @@
+const heading = document.querySelector('.heading');
+heading.textContent = "PromiseAll"
+
 const firstPromise = function () {
   return new Promise((resolve, reject) => {
     setTimeout(() => {

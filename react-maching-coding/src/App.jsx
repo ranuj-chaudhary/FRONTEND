@@ -19,7 +19,8 @@ import ScrollTopToBottom from './sangam_mukherjee_part1/19.ScrollTopToBottom/Scr
 // import TicTacToe from './sangam_mukherjee_part1/14.TicTacToe/TicTacToe';
 // import FeatureComponent from './sangam_mukherjee_part1/15.FeatureFlag/FeatureComponent';
 // import ResizeComponent from './sangam_mukherjee_part1/18.useWindowResize or useResponsiveHook/ResizeComponent';
-import ScrollToSection from './sangam_mukherjee_part1/20.ScrollToSection/ScrollToSection';
+// import ScrollToSection from './sangam_mukherjee_part1/20.ScrollToSection/ScrollToSection';
+import WeatherApp from './sangam_mukherjee_part1/21.WeatherApp/WeatherApp';
 function App() {
   return (
     <>
@@ -51,7 +52,8 @@ function App() {
         {/* <FeatureComponent /> */}
         {/* <ResizeComponent /> */}
         {/* <ScrollTopToBottom /> */}
-        <ScrollToSection />
+        {/* <ScrollToSection /> */}
+        <WeatherApp />
       </div>
     </>
   );
