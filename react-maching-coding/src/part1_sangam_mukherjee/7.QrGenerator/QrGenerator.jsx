@@ -1,6 +1,6 @@
 import React from 'react';
 import QRCode from 'react-qr-code';
-const QrGenerator = ({ value, error, loading }) => {
+const QrGenerator = ({ value, error = '', loading = false }) => {
   return (
     <div
       style={{

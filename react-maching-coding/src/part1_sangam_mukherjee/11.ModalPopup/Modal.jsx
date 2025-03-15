@@ -1,9 +1,9 @@
 import React, { useRef, useState } from 'react';
 import useOutsideClick from './useOutsideClick';
 const style = {
-  btn: 'py-2 px-4 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-all duration-300',
+  btn: 'py-2 px-4  bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-all duration-300',
   wrapper:
-    'fixed top-0 h-full w-full bg-black bg-opacity-40 flex justify-center items-center',
+    'fixed top-0 left-0 h-screen w-screen bg-black bg-opacity-40 flex justify-center items-center',
 };
 
 const Modal = ({ children }) => {
@@ -42,7 +42,7 @@ const Modal = ({ children }) => {
         <div className={`${style.wrapper} wrapper`}>
           <div className="modal-content w-[80%]" ref={modalRef}>
             {children}
-            <div className="close-modal-btn absolute top-2 right-2">
+            <div className="close-modal-btn absolute top-4 right-8">
               <button
                 onClick={(e) => handleCloseModal(e)}
                 className={`${style.btn} `}

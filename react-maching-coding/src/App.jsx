@@ -1,5 +1,5 @@
 import './App.css';
-import TicTacToe from './sangam_mukherjee_part1/14.TicTacToe/TicTacToe';
+import ScrollTopToBottom from './sangam_mukherjee_part1/19.ScrollTopToBottom/ScrollTopToBottom';
 // import AutoSearch from './sangam_mukherjee_part1/13.SearchAutoWithApi.js/AutoSearch';
 // import LightDarkTheme from './sangam_mukherjee_part1/8.LightDarkTheme/LightDark';
 // import Accordion from './sangam_mukherjee_part1/1.Accordion/Accordion';
@@ -16,35 +16,44 @@ import TicTacToe from './sangam_mukherjee_part1/14.TicTacToe/TicTacToe';
 // import Modal from './sangam_mukherjee_part1/11.ModalPopup/Modal';
 // import ModalContent from './sangam_mukherjee_part1/11.ModalPopup/ModalContent';
 // import GiHubProfileSearch from './sangam_mukherjee_part1/12.GihubProfileFinder/GiHubProfileSearch';
+// import TicTacToe from './sangam_mukherjee_part1/14.TicTacToe/TicTacToe';
+// import FeatureComponent from './sangam_mukherjee_part1/15.FeatureFlag/FeatureComponent';
+// import ResizeComponent from './sangam_mukherjee_part1/18.useWindowResize or useResponsiveHook/ResizeComponent';
+// import ScrollToSection from './sangam_mukherjee_part1/20.ScrollToSection/ScrollToSection';
+import WeatherApp from './sangam_mukherjee_part1/21.WeatherApp/WeatherApp';
 function App() {
   return (
     <>
       <div className="app">
         {/* <ScrollIndiator /> */}
-        <div className="app">
-          {/* <Accordion /> */}
-          {/* <RandomColorGenerator /> */}
-          {/*         
+
+        {/* <Accordion /> */}
+        {/* <RandomColorGenerator /> */}
+        {/*         
           <StartRating
             rating={rating}
             setRating={setRating}
             noOfStars={5}
             setIsRated={setIsRated}
           /> */}
-          {/* <ImageSlider url={'https://picsum.photos/v2/list'} /> */}
-          {/* <LoadMoreProducts url={'https://dummyjson.com/products/'} /> */}
-          {/* <DynamicRecursiveTreeMenu listitem={menus} /> */}
-          {/* <LightDarkTheme defaultTheme="light" /> */}
-          {/* <Todo /> */}
-          {/* <ScrollIndiator /> */}
-          {/* <TabTest /> */}
-          {/* <Modal>
+        {/* <ImageSlider url={'https://picsum.photos/v2/list'} /> */}
+        {/* <LoadMoreProducts url={'https://dummyjson.com/products/'} /> */}
+        {/* <DynamicRecursiveTreeMenu listitem={menus} /> */}
+        {/* <LightDarkTheme defaultTheme="light" /> */}
+        {/* <Todo /> */}
+        {/* <ScrollIndiator /> */}
+        {/* <TabTest /> */}
+        {/* <Modal>
            <ModalContent/>
           </Modal> */}
-          {/* <GiHubProfileSearch /> */}
-          {/* <AutoSearch /> */}
-          <TicTacToe />
-        </div>
+        {/* <GiHubProfileSearch /> */}
+        {/* <AutoSearch /> */}
+        {/* <TicTacToe /> */}
+        {/* <FeatureComponent /> */}
+        {/* <ResizeComponent /> */}
+        {/* <ScrollTopToBottom /> */}
+        {/* <ScrollToSection /> */}
+        <WeatherApp />
       </div>
     </>
   );
