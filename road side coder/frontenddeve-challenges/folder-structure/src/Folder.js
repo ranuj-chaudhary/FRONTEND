@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const Folder = ({ files }) => {
     const [expand, setExpand] = useState(false);
-    console.log(files)
+   
     return (
         <div>
             <div

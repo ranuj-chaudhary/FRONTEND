@@ -32,7 +32,7 @@ const Folder = ({ handleInsertNode = () => {}, explorer }) => {
       isFolder: false,
     });
   }
-  console.log(handleInsertNode, explorer.id);
+ 
   if (explorer.isFolder) {
     return (
       <div className="directory">

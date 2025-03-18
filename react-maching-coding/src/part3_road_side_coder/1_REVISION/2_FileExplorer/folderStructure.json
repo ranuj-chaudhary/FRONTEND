@@ -1,0 +1,64 @@
+{
+  "id": 11,
+  "name": "root",
+  "isFolder": true,
+  "items": [
+    {
+      "id": 1,
+      "name": "components",
+      "isFolder": true,
+      "items": [
+        {
+          "id": 2,
+          "name": "Navbar.jsx",
+          "isFolder": false,
+          "items": []
+        },
+        {
+          "id": 3,
+          "name": "Header.jsx",
+          "isFolder": false,
+          "items": []
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Router",
+      "isFolder": true,
+      "items": [
+        {
+          "id": 5,
+          "name": "routes",
+          "isFolder": true,
+          "items": [
+            {
+              "id": 6,
+              "name": "PrivateRoute.jsx",
+              "isFolder": false,
+              "items": []
+            },
+            {
+              "id": 7,
+              "name": "PublicRoute.jsx",
+              "isFolder": false,
+              "items": []
+            },
+            {
+              "id": 8,
+              "name": "AdminRoute.jsx",
+              "isFolder": false,
+              "items": []
+            },
+            {
+              "id": 9,
+              "name": "SellerRoute.jsx",
+              "isFolder": false,
+              "items": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
