@@ -86,6 +86,7 @@ function App() {
   const handleFormSubmit = (e) => {
     e.preventDefault();
     isValidForm()
+    
   }
   console.log('passwordMatch ', isPassMatch)
   return (
