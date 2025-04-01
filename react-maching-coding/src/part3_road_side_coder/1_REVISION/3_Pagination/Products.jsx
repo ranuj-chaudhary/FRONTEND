@@ -3,6 +3,7 @@ import ProductList from './ProductList';
 import ProductItems from './ProductItems';
 import Pagination from './Pagination';
 import { PRODUCTS_PER_PAGE } from './constants/constants';
+import ScrollTracker from '../../useThrottle/ScrollTracker';
 const Products = () => {
   const [currentIndex, setCurrentIndex] = useState(1);
   const [products, setProducts] = useState([]);
@@ -49,17 +50,17 @@ const Products = () => {
   }
 
   function handleNextPage() {
-    const lastPage = products.length / PRODUCTS_PER_PAGE;
+    const lastPage = Math.floor(totalProducts / PRODUCTS_PER_PAGE);
     setCurrentIndex((currentIndex) =>
-      currentIndex === lastPage
-        ? Math.min(lastPage, currentIndex + 1)
+      currentIndex >= lastPage
+        ? Math.min(lastPage, currentIndex)
         : currentIndex + 1
     );
   }
   function handleCurrentIndex(index) {
     setCurrentIndex(index);
   }
-  const finalProducts = products.slice(startIndex, endIndex);
+
 
   if (loading) {
     return (
@@ -75,6 +76,7 @@ const Products = () => {
       </div>
     );
   }
+  console.log(Math.floor(totalProducts/ PRODUCTS_PER_PAGE))
   return (
     <div className="products p-4">
       <ProductList

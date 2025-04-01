@@ -1,0 +1,3 @@
+const MAX_PASS_LENGTH = 20;
+const MIN_PASS_LENGTH = 0;
+export { MAX_PASS_LENGTH, MIN_PASS_LENGTH };

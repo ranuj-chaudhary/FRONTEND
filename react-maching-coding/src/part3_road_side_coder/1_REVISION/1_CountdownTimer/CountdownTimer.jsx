@@ -26,6 +26,7 @@ const CountdownTimer = () => {
       setSeconds((seconds) => seconds - 1);
     }
   }
+  
   function handlePause() {
     setPauseToggle(true);
     clearInterval(timerId.current);

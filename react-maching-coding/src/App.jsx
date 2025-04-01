@@ -1,15 +1,20 @@
 import './App.css';
 //  REVISION
-// import CountdownTimer from './part3_road_side_coder/1_REVISION/1_CountdownTimer/CountdownTimer';
 // import Explorer from './part3_road_side_coder/1_REVISION/2_FileExplorer/Explorer';
-import Products from './part3_road_side_coder/1_REVISION/3_Pagination/Products';
+// import Products from './part3_road_side_coder/1_REVISION/3_Pagination/Products';
+// import PasswordGenerator from './part3_road_side_coder/1_REVISION/4_PasswordGenerator/PasswordGenerator';
+// import ShowProgress from './part3_road_side_coder/1_REVISION/5_ProgressBar/ShowProgress';
+// import ScrollTracker from './part3_road_side_coder/useThrottle/ScrollTracker';
+
 function App() {
   return (
     <>
-      <div className="app">
-       {/* <CountdownTimer /> */}
-       {/* <Explorer /> */}
-       <Products />
+      <div className="">
+        {/* <CountdownTimer /> */}
+        {/* <Explorer /> */}
+        {/* <Products /> */}
+        {/* <PasswordGenerator /> */}
+        {/* <ShowProgress /> */}
       </div>
     </>
   );

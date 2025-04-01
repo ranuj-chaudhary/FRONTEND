@@ -7,7 +7,7 @@ const Pagination = ({
   onChangeIndex,
   currentIndex,
 }) => {
-  const totalPages = totalProducts / PRODUCTS_PER_PAGE;
+  const totalPages = Math.floor(totalProducts / PRODUCTS_PER_PAGE);
   const pages = (totalPages) => {
     const arr = [];
 
@@ -16,8 +16,9 @@ const Pagination = ({
     }
     return arr;
   };
+
   return (
-    <div className="pagination flex justify-center gap-4">
+    <div className="pagination flex justify-center gap-4 fixed bottom-0 bg-white w-full p-4">
       <button
         onClick={onPrevPage}
         className="bg-gray-200 px-4 py-2 rounded-md font-bold cursor-pointer"
@@ -29,8 +30,8 @@ const Pagination = ({
         <button
           key={page}
           onClick={() => onChangeIndex(page)}
-          className={`text-white bg-blue-400 px-4 py-2 rounded-md cursor-pointer ${
-            currentIndex === page ? 'bg-blue-600' : ''
+          className={`text-white  px-4 py-2 rounded-md cursor-pointer ${
+            currentIndex === page ? 'bg-blue-600' : 'bg-blue-400'
           }`}
         >
           {page}
