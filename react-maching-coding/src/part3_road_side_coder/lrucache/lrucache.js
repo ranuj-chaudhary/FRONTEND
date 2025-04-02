@@ -73,7 +73,7 @@ class LRUCache {
     if (!this.head) return null;
     console.log(typeof this.cache.key);
     if (this.cache[key] && this.cache[key].key === key) {
-      +this.moveToFront(key);
+      this.moveToFront(key);
       return { key: this.cache[key].val };
     }
     return null;
