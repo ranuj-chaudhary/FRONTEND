@@ -1,4 +1,5 @@
 import './App.css';
+import DynamicContentLoader from './part3_road_side_coder/1_REVISION/6_LruCache/DynamicContentLoader';
 //  REVISION
 // import Explorer from './part3_road_side_coder/1_REVISION/2_FileExplorer/Explorer';
 // import Products from './part3_road_side_coder/1_REVISION/3_Pagination/Products';
@@ -15,6 +16,7 @@ function App() {
         {/* <Products /> */}
         {/* <PasswordGenerator /> */}
         {/* <ShowProgress /> */}
+        <DynamicContentLoader />
       </div>
     </>
   );
