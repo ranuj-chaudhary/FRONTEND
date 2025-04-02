@@ -6,6 +6,7 @@ const ParentComponent = () => {
     num: 0,
   });
   const [show, setShow] = useState(false);
+  
   function handleChangeCount(action) {
     action === 'increment'
       ? setCount({ num: count.num++, ...count })
