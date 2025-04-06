@@ -17,7 +17,10 @@ Array.prototype.myFlat = function (depth) {
   const result = [];
 
   function flat(arr, depth) {
-    
+    if(depth === 0) {
+        result.push(...arr);
+        return;
+    }
     for (let i = 0; i < arr.length; i++) {
       if (Array.isArray(arr[i])) {
         flat(arr[i], depth - 1);
@@ -29,7 +32,7 @@ Array.prototype.myFlat = function (depth) {
   flat(arr, depth);
   return result;
 };
-console.log(data.myFlat(-1));
+console.log(data.myFlat(1));
 
 //  Iterative way
 
