@@ -1,3 +1,12 @@
+/*
+every(callbackFn)
+every(callbackFn, thisArg)
+
+SATIFIES RETURNS: true (every element in the array passes the test implemented by the provided function)
+NOT FOUND RETURNS: false (at least one element in the array does not pass the test implemented by the provided function)
+*/
+
+
 const arr = [17, 18, 15, 16, 19];
 
 function myCustomEvery(cb) {
