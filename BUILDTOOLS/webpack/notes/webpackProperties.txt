@@ -1,0 +1,19 @@
+
+Property	                 Why It's Used
+--------                    ----------------
+
+entry	        Tells Webpack where to start bundling. This is your app's main file.
+
+output	        Defines the output file name and path for the bundled code.
+
+module.rules	Tells Webpack how to handle different file types (via loaders).
+
+test	        Regex to match files (e.g., .css, .js).
+
+use	Loaders     applied to matched files, used for transforming them.
+
+plugins	        Used to do things outside module transformation, e.g., minify, clean dist.
+
+devServer	    Runs a local server for testing and supports hot-reloading.
+
+mode	        Optimizes the build for development (fast) or production (minified).
