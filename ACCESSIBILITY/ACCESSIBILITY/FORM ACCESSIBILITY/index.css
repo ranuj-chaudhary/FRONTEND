@@ -1,0 +1,145 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: aliceblue;
+}
+body,
+.contact-input,
+.address-input,
+.radio-container p {
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  transition: background-color 0.2s linear;
+}
+.contact-page {
+  min-height: 100vh;
+  overflow-y: auto;
+}
+.contact-form-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+}
+.contact-image {
+  width: 400px;
+  object-fit: contain;
+  margin-left: 60px;
+}
+.contact-form-heading {
+  font-size: 3rem;
+  margin: 0;
+}
+.contact-form-intro {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+}
+.contact-input {
+  display: block;
+  border-radius: 20px;
+  padding: 8px 20px;
+  font-size: 1rem;
+  border: 2px solid #333333;
+}
+.contact-textarea {
+  max-width: 300px;
+  padding: 16px 20px;
+  border: 2px solid #333333;
+}
+.contact-input::-webkit-input-placeholder,
+.address-input::-webkit-input-placeholder {
+  color: #555555;
+}
+.contact-submit-button {
+  border: 2px solid #333333;
+  padding: 8px 20px;
+  border-radius: 40px;
+  margin: 10px auto 0;
+  min-width: 120px;
+  font-style: bold;
+}
+.contact-submit-button:hover {
+  background-color: #dddddd;
+  cursor: pointer;
+}
+.contact-submit-button:focus {
+  background-color: #dddddd;
+}
+.address {
+  display: flex;
+  border: 2px solid black;
+}
+.address-input,
+.city-select {
+  border-radius: 20px;
+  padding: 8px 10px;
+  font-size: 1rem;
+  border: 2px solid #333333;
+}
+
+.contact-radio {
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+.radio-container {
+  margin-bottom: 10px;
+}
+
+/* 
+Challenge:
+1. Add an id attribute to each input field. (You are going to need it, *hint hint*)
+2. Add labels for each input field in the form. Look up how to associate a label with an input field so that when clicking the label, the input field gets focused.
+3. Change the placeholder names to be exemplary user inputs, i.e. "Obama" for a surname field.
+*/
+
+/* ADDDITION CSS */
+.contact-input:focus {
+  background-color: #eeeeee;
+}
+.input__block {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  width: 70%;
+  min-width: 300px;
+}
+
+.input__block.input__block--flex__col {
+  flex-direction: column;
+}
+.input__block--flex__row {
+  flex-direction: row;
+}
+
+fieldset {
+  width: 100%;
+  border-radius: 50px;
+  padding: 6px 20px;
+  font-size: 1rem;
+  border: 2px solid #333333;
+}
+.image__container,
+.form {
+  flex: 1;
+}
+
+.city,
+.postcode {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.city .city-select {
+  flex: 1;
+  display: block;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}

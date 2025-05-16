@@ -1,0 +1,106 @@
+<html>
+  <head>
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body class="contact-page">
+    <main id="main">
+      <!-- Form section -->
+      <section class="contact-form-section">
+        <form id="form1" class="form">
+          <h2 class="contact-form-heading">Sign up</h2>
+          <p class="contact-form-intro">
+            Enter your contact information, and then there will be cake. 🍰
+          </p>
+          <div class="input__block input__block--flex__col">
+            <label id="fullname" for="fullname">Fullname</label>
+            <input
+              id="fullname"
+              name="fullname"
+              class="contact-input"
+              type="text"
+              placeholder="Ranuj Choudhary"
+            />
+          </div>
+          <div class="input__block input__block--flex__col">
+            <label id="address" for="address">Address</label>
+            <input
+              id="address"
+              name="address"
+              class="contact-input"
+              type="text"
+              placeholder="Dream City Meerut Uttar Pradesh"
+            />
+          </div>
+          <div class="input__block">
+            <div class="city">
+              <label for="city">City</label>
+              <select
+                class="contact-input"
+                id="city"
+                type="text"
+                placeholder="London"
+              >
+                <option value="london">London</option>
+                <option value="manchester">Manchester</option>
+                <option value="leeds">Leeds</option>
+              </select>
+            </div>
+            <div class="postcode">
+              <label for="postcode">Postcode</label>
+              <input
+                id="postcode"
+                name="postcode"
+                class="contact-input"
+                type="text"
+                placeholder="250001"
+              />
+            </div>
+          </div>
+          <div class="input__block input__block--flex__col">
+            <label for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              class="contact-input"
+              type="text"
+              placeholder="ranujchoudhary@gmail.com"
+            />
+          </div>
+          <div class="input__block">
+            <fieldset form="form1" class="radio-container">
+              <legend>Do you have cats?</legend>
+              <label for="yes">Yes</label>
+              <input id="yes" type="radio" name="cats" />
+              <label for="no">No</label>
+              <input id="no" type="radio" name="cats" />
+            </fieldset>
+          </div>
+          <button class="contact-submit-button" type="button">
+            Submit Details
+          </button>
+        </form>
+        <div class="image__container">
+          <img
+            class="contact-image"
+            src="images/drone-contact.png"
+            alt="A woman seeing a drone approaching."
+          />
+        </div>
+      </section>
+      <p>
+        Mahatma Gandhi was born on
+        <time datetime="1869-10-02">October 2, 1869</time>.
+      </p>
+    </main>
+  </body>
+</html>
