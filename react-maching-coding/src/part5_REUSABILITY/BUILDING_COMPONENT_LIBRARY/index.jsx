@@ -1,19 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Button from "./BUTTON/Button"
-import { FaMoneyBill } from "react-icons/fa"
-/**
- * Challenge: Add the "FaMoneyBill" icon to the left
- * of the "Buy now!" text in the button
- */
+import Menu from './COMPOUND_COMPONENTS/Menu';
 
 function App() {
+  const sports = ["Tennis", "Pickleball", "Racquetball", "Squash"]
+  
   return (
-    <main>
-      <Button variant="success" size="sm">Success</Button>
-      <Button variant="warning" size="md">Warning</Button>
-      <Button variant="danger" size="lg">Danger</Button>
-    </main>
+    <Menu>
+      <Menu.Button>Sports</Menu.Button>
+      <Menu.Dropdown>
+        {sports.map(sport => (
+          <Menu.Item key={sport}>{sport}</Menu.Item>
+        ))}
+      </Menu.Dropdown>
+    </Menu>
   )
 }
 
