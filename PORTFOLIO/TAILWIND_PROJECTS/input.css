@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+/* build higher level class with components */
+@layer components {
+  .btn-blue {
+    @apply bg-blue-400 text-white p-2;
+  }
+}
+
+/* 
+@variant
+Use the @variant directive to apply a Tailwind variant to styles in your CSS:
+*/
+
+.my-element {
+  background: white;
+  @variant dark {
+    background: black;
+  }
+}
+
+/* @apply */
+.select2-dropdown {
+  @apply rounded-b-lg shadow-md;
+}
+.select2-search {
+  @apply rounded border border-gray-300;
+}
+.select2-results__group {
+  @apply text-lg font-bold text-gray-900;
+}
