@@ -1,23 +1,29 @@
-# Webpack & Tailwind CSS Setup 
+# Webpack & Tailwind CSS Setup
 
 ### Create your package.json
+
 ```
 npm init -y
 ```
 
 ### Create your src folder
+
 Create a folder called **src** and add an empty **index.js** file. The code that webpack compiles goes in here including any Javascript modules and the main Tailwind file.
 
 ### Install Tailwind
+
 ```
 npm i -D tailwindcss
 ```
 
 ### Install Webpack & Loaders
+
 ```
 npm i -D webpack webpack-cli webpack-dev-server style-loader css-loader postcss postcss-loader postcss-preset-env
 ```
+
 ### Create webpack.config.js in the root and add this to it...
+
 ```
 const path = require('path')
 
@@ -52,7 +58,9 @@ module.exports = {
 ```
 
 ### Add Tailwind Directives
+
 Create a **style.css** in your **src** folder and add these 3 lines
+
 ```
 @tailwind base;
 @tailwind components;
@@ -61,7 +69,9 @@ Create a **style.css** in your **src** folder and add these 3 lines
 ```
 
 ### Tailwind Config File
+
 run the following command to generate your **tailwind.config.js** file and add this to it
+
 ```
 module.exports = {
   content: ['./dist/*.html'],
@@ -77,7 +87,9 @@ module.exports = {
 ```
 
 ### PostCCSS Config File
+
 Create a file in the root called **postcss.config.js** and add this
+
 ```
 const tailwindcss = require('tailwindcss');
 module.exports = {
@@ -89,11 +101,13 @@ module.exports = {
 ```
 
 ### Add this line to your src/index.js
+
 ```
 import './style.css';
 ```
 
 ### Create a **dist/index.html** file and add this
+
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -113,6 +127,7 @@ import './style.css';
 ### Add scripts to package.json
 
 Add the following to your package.json file
+
 ```
 "scripts": {
     "dev": "webpack serve",
@@ -121,12 +136,15 @@ Add the following to your package.json file
 ```
 
 ### Running your app
+
 To build once and create your **dist/bundle.js** file, run
+
 ```
 npm run build
 ```
 
 To run your webpack server
+
 ```
 npm run dev
 ```
