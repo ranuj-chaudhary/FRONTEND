@@ -1,5 +1,5 @@
 /* src/index.css */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -18,16 +18,16 @@
   --text-gray: #7a7d96;
 
   --text-gradient-two-colors: linear-gradient(
-      3.72deg,
-      rgba(240, 238, 250, 0.8) 3.05%,
-      #e1e8ff 96.95%
-    );
-    --text-gradient-three-colors: linear-gradient(
-      90deg,
-      #080823 0%,
-      #49496e 50%,
-      #080823 100%
-    );
+    3.72deg,
+    rgba(240, 238, 250, 0.8) 3.05%,
+    #e1e8ff 96.95%
+  );
+  --text-gradient-three-colors: linear-gradient(
+    90deg,
+    #080823 0%,
+    #49496e 50%,
+    #080823 100%
+  );
 
   --text-gradient-four-colors: linear-gradient(
     90deg,
@@ -71,7 +71,7 @@
     rgba(226, 232, 255, 0.121569) 97.97%
   );
   /* You can also add other global variables here, e.g., font stacks */
-  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light dark; /* Signal light and dark theme support */
@@ -228,17 +228,7 @@
 
 @layer utilities {
   /* Hero Section Background Circle Animation */
-  .circle-bigger::before {
-    background-size: 100% 100%;
-    background-position: 0px 0px;
-    background-image: conic-gradient(
-      from 223deg at 50% 50%,
-      #080823 88%,
-      #ff008fff 96%,
-      #fca36e 98%
-    );
-    @apply absolute left-[-25%] top-[-25%] h-[150%] w-[150%] animate-circle-spin-clockwise content-[''];
-  }
+  .circle-bigger::before,
   .circle-small::before {
     background-size: 100% 100%;
     background-position: 0px 0px;
@@ -248,7 +238,11 @@
       #ff008fff 96%,
       #fca36e 98%
     );
-
+  }
+  .circle-bigger::before {
+    @apply absolute left-[-25%] top-[-25%] h-[150%] w-[150%] animate-circle-spin-clockwise content-[''];
+  }
+  .circle-small::before {
     @apply absolute left-[-25%] top-[-25%] h-[150%] w-[150%] animate-circle-spin-anticlockwise content-[''];
   }
   /* Button Animation */
