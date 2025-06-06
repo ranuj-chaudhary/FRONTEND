@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-      <title>Dimention Website</title>
+    <title>Dimention Website</title>
   </head>
   <body>
     <!-- Header Section Starts-->
@@ -19,7 +19,7 @@
     >
       <nav class="section-container flex justify-between p-4">
         <div class="logo flex items-center gap-2">
-          <img class="h-9 w-9" src="images/logo.png" alt="" />
+          <img class="h-9 w-9" src="images/logo.png" alt />
           <span class="font-semibold text-white">Dimention</span>
         </div>
         <ul
@@ -40,7 +40,7 @@
     <!-- Header Section Ends-->
 
     <!-- Hero Section Starts-->
-    <section class="hero px-4">
+    <section class="hero py-4">
       <div class="section-container pt-20">
         <div class="relative overflow-hidden pb-24">
           <div
@@ -97,27 +97,90 @@
               <!-- Hero Animated Button Ends-->
             </div>
           </div>
-          <!-- Rotation Animation Circles -->
+          <!-- Rotation Animation Circles Starts-->
           <div class="circle-biggest custom-thin-border"></div>
           <div class="circle-bigger"></div>
           <div class="circle-bigger-overlay custom-thin-border"></div>
           <div class="circle-small"></div>
           <div class="circle-small-overlay"></div>
+          <!-- Rotation Animation Circles Ends-->
         </div>
       </div>
-
-      <div>
-        <img class="h-full w-full" src="images/panel_view.png" alt="" />
+      <!-- Chat Panel with Animation -->
+      <div
+        class="section-container chat-panel h-[500px] mt-10 relative overflow-hidden rounded-sm"
+      >
+        <div class="card-content">
+          <img src="images/panel_view.png" alt="" class="w-full h-full" />
+        </div>
       </div>
     </section>
     <!-- Hero Section Ends-->
 
+    <!-- Brand Logos Section Starts -->
+    <section class="py-10">
+      <div class="section-container px-4">
+        <p class="text-center w-96 m-auto font-medium">
+          Join the maintainers and contributors to the largest open-source
+          projects on our waitlist.
+        </p>
+        <div class="flex flex-wrap justify-center items-center gap-1 mt-6">
+          <img src="images/million-logo.png" alt="Brand 1" class="w-40" />
+          <img src="images/tabler-logo.png" alt="Brand 2" class="w-40" />
+          <img src="images/solidjs-logo.png" alt="Brand 3" class="w-40" />
+          <img src="images/starship-logo.png" alt="Brand 4" class="w-40" />
+          <img src="images/astro-logo.png" alt="Brand 5" class="w-40" />
+        </div>
+      </div>
+    </section>
+    <!-- Brand Logos Section Ends -->
+
     <!-- Stroke Animation Section Start-->
     <section id="card">
-      <div class="section-container mb-6">
-        <div class="fixed__width m-auto p-6 md:max-w-4xl">
-          <div class="box-border-stroke-animation h-72"></div>
-          <div class="card__heading m-auto max-w-md md:max-w-none">
+      <div class="section-container mb-6 relative">
+        <!-- Main Stroke Boxes -->
+        <!-- bg-[var(--color-brand-primary)] -->
+        <!-- bg-[#1F203B] -->
+        <div
+          class="card__stroke__box absolute left-10 -top-8 h-[600px] w-[450px] rounded-2xl p-4"
+        >
+          <!-- First Stroke Box -->
+          <div
+            class="card__stroke__halfbox__first bg-[#1F203B] -z-10 m-2 w-[97%] ml-4 h-1/2 relative overflow-hidden rounded-br-2xl"
+          >
+            <!-- Wrapper Starts -->
+            <div
+              class="card__stroke__fullbox__wrapper bg-[var(--color-brand-primary)] rounded-br-2xl"
+            >
+              <div
+                class="start__blinking bg-[var(--color-brand-primary)] rounded-br-2xl"
+              >
+                <img src="" alt="" />
+              </div>
+            </div>
+            <!-- Wrapper Ends -->
+          </div>
+          <!-- Second Stroke Box -->
+          <div
+            class="card__stroke__halfbox__second -z-10 bg-[#1F203B] w-full h-1/2 relative overflow-hidden rounded-2xl transform -translate-y-2"
+          >
+            <div
+              class="card__stroke__fullbox__wrapper z-10 bg-[var(--color-brand-primary)] rounded-l-2xl transform translate-x-[1px]"
+            ></div>
+          </div>
+          <!-- Small Left Stroke Box -->
+          <div
+            class="small__rightbox absolute w-56 h-56 left-[97%] -z-50 bg-[#1F203B] top-0 rounded-br-2xl overflow-hidden"
+          >
+            <div
+              class="card__stroke__fullbox__wrapper rounded-br-2xl bg-[var(--color-brand-primary)]"
+            ></div>
+          </div>
+        </div>
+
+        <div class="fixed__width m-auto p-6 md:max-w-5xl relative">
+         
+          <div class="card__heading m-auto max-w-md md:max-w-none mt-[200px] relative">
             <!-- Animated Lightning Icon Start -->
             <div class="main-container animated-border-button ml-4 h-24 w-28">
               <div class="card-wrapper">
@@ -135,7 +198,7 @@
                           <img
                             src="images/lightning__icon.png"
                             class="logo"
-                            alt=""
+                            alt
                           />
                         </div>
                       </div>
@@ -145,11 +208,16 @@
               </div>
             </div>
             <!-- Animated Lightning Icon Ends -->
-            <h2 class="mt-8 text-5xl text-white">
-              Build software <span class="text-gradient-five-colors"
-                >faster, together.</span
-              >
+             <div class="heading relative">
+              <h2 class="mt-8 text-5xl text-white">
+              Build software
+              <span class="text-gradient-five-colors">faster, together.</span>
             </h2>
+               <span class="vertical__start__blinking absolute top-0 right-44 w-24"
+            ><img src="w-full" alt=""
+          /></span>
+             </div>
+            
             <p class="text-[#999DB6]">
               The most complete developer experience.
             </p>
@@ -157,10 +225,10 @@
           <div class="card__content mt-16 flex flex-col gap-6 md:flex-row">
             <!-- Card Left -->
             <div
-              class="card__left custom-thin-border m-auto max-w-md flex-1 overflow-hidden rounded-md p-2"
+              class="card__left custom-thin-border m-auto max-w-md flex-1 overflow-hidden rounded-md p-2 bg-[var(--color-brand-primary)]"
             >
               <div class="card_title p-4">
-                <img src="images/headphone_icon.png" alt="" />
+                <img src="images/headphone_icon.png" alt />
 
                 <h3 class="mt-2 text-lg font-semibold text-[#E2E8FF]">
                   Collaborate on everything.
@@ -174,17 +242,172 @@
               </div>
 
               <div
-                class="card__image custom-thin-border relative flex h-96 w-full flex-col rounded-md p-1"
+                class="card__image custom-thin-border relative flex min-w-96 h-96 w-full flex-col rounded-md p-1"
               >
-                <img
-                  src="images/code_snippet.png"
-                  class="flex-1 object-contain"
-                  alt=""
-                />
+                <div class="flex-1 relative w-96 h-36">
+                  <img
+                    src="images/code_snippet.png"
+                    class="object-contain"
+                    alt
+                  />
+                  <!-- Necati -->
+
+                  <div
+                    class="left-card-nacati-cursor absolute bg-linear-custom-angle-purple-light flex flex-col top-[71px] left-[260px] rounded-full px-4 py-1 text-[10px]"
+                  >
+                    <div class="relative">
+                      <span>Nacati</span>
+                      <span class="absolute w-3 h-3 -top-3 -left-6">
+                        <svg
+                          width="15"
+                          height="15"
+                          viewBox="0 0 15 15"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1.63965 1.23926V1.24023L13.5508 6.14453C13.5691 6.15205 13.5864 6.16246 13.6016 6.1748L13.6406 6.21777C13.6517 6.23424 13.6602 6.2527 13.666 6.27148L13.6758 6.3291C13.676 6.36857 13.6642 6.40741 13.6426 6.44043C13.6317 6.45699 13.6185 6.47181 13.6035 6.48438L13.5537 6.51465L9.16406 8.39551L9.36133 8.85547L9.16406 8.39648C8.91637 8.50277 8.71235 8.68834 8.58398 8.92285L8.53418 9.02637L6.65234 13.416C6.64458 13.4341 6.63456 13.4509 6.62207 13.4658L6.57812 13.5049C6.54509 13.5265 6.50627 13.5374 6.4668 13.5371L6.40918 13.5283C6.39051 13.5226 6.37283 13.514 6.35645 13.5029C6.34008 13.4919 6.32484 13.479 6.3125 13.4639L6.2832 13.4131L1.37891 1.50293C1.37132 1.48452 1.36614 1.46492 1.36426 1.44531L1.36719 1.38672C1.37104 1.36754 1.37764 1.34912 1.38672 1.33203L1.42188 1.28418C1.43581 1.27024 1.45157 1.25825 1.46875 1.24902L1.52441 1.22949C1.5629 1.22178 1.60328 1.22452 1.63965 1.23926Z"
+                            fill="url(#paint0_linear_1151_921)"
+                            stroke="url(#paint1_linear_1151_921)"
+                          />
+                          <defs>
+                            <lineargradient
+                              id="paint0_linear_1151_921"
+                              x1="7.51933"
+                              y1="0.725586"
+                              x2="7.51933"
+                              y2="14.0375"
+                              gradientUnits="userSpaceOnUse"
+                            >
+                              <stop stop-color="#1F2138" />
+                              <stop offset="1" stop-color="#393952" />
+                            </lineargradient>
+                            <lineargradient
+                              id="paint1_linear_1151_921"
+                              x1="7.51933"
+                              y1="0.725585"
+                              x2="22.2713"
+                              y2="9.02622"
+                              gradientUnits="userSpaceOnUse"
+                            >
+                              <stop stop-color="#737373" stop-opacity="0.46" />
+                              <stop
+                                offset="1"
+                                stop-color="#737373"
+                                stop-opacity="0"
+                              />
+                            </lineargradient>
+                          </defs>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <!-- Tejas -->
+                  <div
+                    class="left-card-tejas-cursor absolute bg-linear-custom-angle-purple flex flex-col top-[30%] left-16 rounded-full px-4 py-1 text-[10px]"
+                  >
+                    <div class="relative">
+                      <span>Tejas</span>
+                      <span class="absolute w-3 h-3 -top-3 -left-6">
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 14 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1.29102 0.813965V0.814941L13.2021 5.71924C13.2204 5.72676 13.2378 5.73716 13.2529 5.74951L13.292 5.79248C13.3031 5.80895 13.3116 5.82741 13.3174 5.84619L13.3271 5.90381C13.3274 5.94327 13.3156 5.98212 13.2939 6.01514C13.2831 6.0317 13.2699 6.04652 13.2549 6.05908L13.2051 6.08936L8.81543 7.97021L9.0127 8.43018L8.81543 7.97119C8.56774 8.07748 8.36371 8.26304 8.23535 8.49756L8.18555 8.60107L6.30371 12.9907C6.29595 13.0088 6.28593 13.0256 6.27344 13.0405L6.22949 13.0796C6.19645 13.1012 6.15763 13.1121 6.11816 13.1118L6.06055 13.103C6.04187 13.0973 6.02419 13.0887 6.00781 13.0776C5.99145 13.0666 5.97621 13.0537 5.96387 13.0386L5.93457 12.9878L1.03027 1.07764C1.02268 1.05923 1.0175 1.03963 1.01562 1.02002L1.01855 0.961426C1.0224 0.942246 1.029 0.923829 1.03809 0.906738L1.07324 0.858887C1.08718 0.844951 1.10294 0.832954 1.12012 0.82373L1.17578 0.804199C1.21427 0.796489 1.25465 0.799226 1.29102 0.813965Z"
+                            fill="url(#paint0_linear_92_2663)"
+                            stroke="url(#paint1_linear_92_2663)"
+                          />
+                          <defs>
+                            <lineargradient
+                              id="paint0_linear_92_2663"
+                              x1="7.1707"
+                              y1="0.300293"
+                              x2="7.1707"
+                              y2="13.6122"
+                              gradientUnits="userSpaceOnUse"
+                            >
+                              <stop stop-color="#1F2138" />
+                              <stop offset="1" stop-color="#393952" />
+                            </lineargradient>
+                            <lineargradient
+                              id="paint1_linear_92_2663"
+                              x1="7.1707"
+                              y1="0.300292"
+                              x2="21.9227"
+                              y2="8.60092"
+                              gradientUnits="userSpaceOnUse"
+                            >
+                              <stop stop-color="#737373" stop-opacity="0.46" />
+                              <stop
+                                offset="1"
+                                stop-color="#737373"
+                                stop-opacity="0"
+                              />
+                            </lineargradient>
+                          </defs>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <!-- Ojas -->
+                  <div
+                    class="left-card-ojas-cursor absolute bg-linear-custom-angle-purple flex flex-col top-[48%] right-10 rounded-full px-4 py-1 text-[10px]"
+                  >
+                    <div class="relative">
+                      <span>Ojas</span>
+                      <span class="absolute w-3 h-3 -top-3 -left-6">
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 14 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1.29102 0.813965V0.814941L13.2021 5.71924C13.2204 5.72676 13.2378 5.73716 13.2529 5.74951L13.292 5.79248C13.3031 5.80895 13.3116 5.82741 13.3174 5.84619L13.3271 5.90381C13.3274 5.94327 13.3156 5.98212 13.2939 6.01514C13.2831 6.0317 13.2699 6.04652 13.2549 6.05908L13.2051 6.08936L8.81543 7.97021L9.0127 8.43018L8.81543 7.97119C8.56774 8.07748 8.36371 8.26304 8.23535 8.49756L8.18555 8.60107L6.30371 12.9907C6.29595 13.0088 6.28593 13.0256 6.27344 13.0405L6.22949 13.0796C6.19645 13.1012 6.15763 13.1121 6.11816 13.1118L6.06055 13.103C6.04187 13.0973 6.02419 13.0887 6.00781 13.0776C5.99145 13.0666 5.97621 13.0537 5.96387 13.0386L5.93457 12.9878L1.03027 1.07764C1.02268 1.05923 1.0175 1.03963 1.01562 1.02002L1.01855 0.961426C1.0224 0.942246 1.029 0.923829 1.03809 0.906738L1.07324 0.858887C1.08718 0.844951 1.10294 0.832954 1.12012 0.82373L1.17578 0.804199C1.21427 0.796489 1.25465 0.799226 1.29102 0.813965Z"
+                            fill="url(#paint0_linear_92_2663)"
+                            stroke="url(#paint1_linear_92_2663)"
+                          />
+                          <defs>
+                            <lineargradient
+                              id="paint0_linear_92_2663"
+                              x1="7.1707"
+                              y1="0.300293"
+                              x2="7.1707"
+                              y2="13.6122"
+                              gradientUnits="userSpaceOnUse"
+                            >
+                              <stop stop-color="#1F2138" />
+                              <stop offset="1" stop-color="#393952" />
+                            </lineargradient>
+                            <lineargradient
+                              id="paint1_linear_92_2663"
+                              x1="7.1707"
+                              y1="0.300292"
+                              x2="21.9227"
+                              y2="8.60092"
+                              gradientUnits="userSpaceOnUse"
+                            >
+                              <stop stop-color="#737373" stop-opacity="0.46" />
+                              <stop
+                                offset="1"
+                                stop-color="#737373"
+                                stop-opacity="0"
+                              />
+                            </lineargradient>
+                          </defs>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
                 <div class="image__overlay custom-thin-border rounded-md py-6">
-                  <p class="text-center text-white">
-                    {} Collaborative debugging.
-                  </p>
+                  <p class="text-center text-white">Collaborative debugging.</p>
                   <p
                     class="text-[var(--text-gray)] 20% 20% text-center text-xs"
                   >
@@ -198,7 +421,7 @@
               class="card__right custom-thin-border m-auto max-w-md flex-1 overflow-hidden rounded-md p-2"
             >
               <div class="card_title p-4">
-                <img src="images/cube_doted_icon.png" alt="" />
+                <img src="images/cube_doted_icon.png" alt />
 
                 <h3 class="mt-2 text-lg font-semibold text-[#E2E8FF]">
                   Crafted for your favorite tools
@@ -220,7 +443,7 @@
                     <div
                       class="center-icon h-20 w-20 overflow-hidden rounded-full"
                     >
-                      <img src="images/logo.png" class="h-full w-full" alt="" />
+                      <img src="images/logo.png" class="h-full w-full" alt />
                     </div>
                     <div
                       class="icon-container icon-rotation-clockwise relative h-full w-full rounded-full border-[0.8px] border-gray-400"
@@ -359,14 +582,14 @@
                               />
                             </g>
                             <defs>
-                              <clipPath id="clip0_450_307">
+                              <clippath id="clip0_450_307">
                                 <rect
                                   width="28"
                                   height="28"
                                   fill="white"
                                   transform="translate(0.5)"
                                 />
-                              </clipPath>
+                              </clippath>
                             </defs>
                           </svg>
                         </div>
@@ -421,14 +644,14 @@
                               />
                             </g>
                             <defs>
-                              <clipPath id="clip0_450_307">
+                              <clippath id="clip0_450_307">
                                 <rect
                                   width="28"
                                   height="28"
                                   fill="white"
                                   transform="translate(0.5)"
                                 />
-                              </clipPath>
+                              </clippath>
                             </defs>
                           </svg>
                         </div>
@@ -483,14 +706,14 @@
                               />
                             </g>
                             <defs>
-                              <clipPath id="clip0_450_307">
+                              <clippath id="clip0_450_307">
                                 <rect
                                   width="28"
                                   height="28"
                                   fill="white"
                                   transform="translate(0.5)"
                                 />
-                              </clipPath>
+                              </clippath>
                             </defs>
                           </svg>
                         </div>
@@ -713,7 +936,7 @@
                         stroke-width="1.10312"
                       />
                       <defs>
-                        <linearGradient
+                        <lineargradient
                           id="paint0_linear_15_1242"
                           x1="303.306"
                           y1="151.837"
@@ -725,8 +948,8 @@
                           <stop offset="0.25" stop-color="#AB717D" />
                           <stop offset="0.548077" stop-color="#965F7E" />
                           <stop offset="1" stop-color="#151630" />
-                        </linearGradient>
-                        <linearGradient
+                        </lineargradient>
+                        <lineargradient
                           id="paint1_linear_15_1242"
                           x1="323.833"
                           y1="169.174"
@@ -738,8 +961,8 @@
                           <stop offset="0.25" stop-color="#AB717D" />
                           <stop offset="0.548077" stop-color="#965F7E" />
                           <stop offset="1" stop-color="#151630" />
-                        </linearGradient>
-                        <linearGradient
+                        </lineargradient>
+                        <lineargradient
                           id="paint2_linear_15_1242"
                           x1="340.789"
                           y1="188.693"
@@ -751,8 +974,8 @@
                           <stop offset="0.25" stop-color="#AB717D" />
                           <stop offset="0.548077" stop-color="#965F7E" />
                           <stop offset="1" stop-color="#151630" />
-                        </linearGradient>
-                        <linearGradient
+                        </lineargradient>
+                        <lineargradient
                           id="paint3_linear_15_1242"
                           x1="354.212"
                           y1="209.774"
@@ -764,8 +987,8 @@
                           <stop offset="0.25" stop-color="#AB717D" />
                           <stop offset="0.548077" stop-color="#965F7E" />
                           <stop offset="1" stop-color="#151630" />
-                        </linearGradient>
-                        <linearGradient
+                        </lineargradient>
+                        <lineargradient
                           id="paint4_linear_15_1242"
                           x1="363.059"
                           y1="232.669"
@@ -777,8 +1000,8 @@
                           <stop offset="0.25" stop-color="#AB717D" />
                           <stop offset="0.548077" stop-color="#965F7E" />
                           <stop offset="1" stop-color="#151630" />
-                        </linearGradient>
-                        <linearGradient
+                        </lineargradient>
+                        <lineargradient
                           id="paint5_linear_15_1242"
                           x1="367.138"
                           y1="254.851"
@@ -790,8 +1013,8 @@
                           <stop offset="0.25" stop-color="#AB717D" />
                           <stop offset="0.548077" stop-color="#965F7E" />
                           <stop offset="1" stop-color="#151630" />
-                        </linearGradient>
-                        <linearGradient
+                        </lineargradient>
+                        <lineargradient
                           id="paint6_linear_15_1242"
                           x1="365.526"
                           y1="277.541"
@@ -803,8 +1026,8 @@
                           <stop offset="0.25" stop-color="#AB717D" />
                           <stop offset="0.548077" stop-color="#965F7E" />
                           <stop offset="1" stop-color="#151630" />
-                        </linearGradient>
-                        <linearGradient
+                        </lineargradient>
+                        <lineargradient
                           id="paint7_linear_15_1242"
                           x1="284.018"
                           y1="139.635"
@@ -816,8 +1039,8 @@
                           <stop offset="0.25" stop-color="#AB717D" />
                           <stop offset="0.548077" stop-color="#965F7E" />
                           <stop offset="1" stop-color="#151630" />
-                        </linearGradient>
-                        <linearGradient
+                        </lineargradient>
+                        <lineargradient
                           id="paint8_linear_15_1242"
                           x1="245.125"
                           y1="134.317"
@@ -829,8 +1052,8 @@
                           <stop offset="0.25" stop-color="#AB717D" />
                           <stop offset="0.548077" stop-color="#965F7E" />
                           <stop offset="1" stop-color="#151630" />
-                        </linearGradient>
-                        <linearGradient
+                        </lineargradient>
+                        <lineargradient
                           id="paint9_linear_15_1242"
                           x1="211.738"
                           y1="130.057"
@@ -842,8 +1065,8 @@
                           <stop offset="0.25" stop-color="#AB717D" />
                           <stop offset="0.548077" stop-color="#965F7E" />
                           <stop offset="1" stop-color="#151630" />
-                        </linearGradient>
-                        <linearGradient
+                        </lineargradient>
+                        <lineargradient
                           id="paint10_linear_15_1242"
                           x1="181.962"
                           y1="128.068"
@@ -855,8 +1078,8 @@
                           <stop offset="0.25" stop-color="#AB717D" />
                           <stop offset="0.548077" stop-color="#965F7E" />
                           <stop offset="1" stop-color="#151630" />
-                        </linearGradient>
-                        <linearGradient
+                        </lineargradient>
+                        <lineargradient
                           id="paint11_linear_15_1242"
                           x1="144.148"
                           y1="137.23"
@@ -868,8 +1091,8 @@
                           <stop offset="0.25" stop-color="#AB717D" />
                           <stop offset="0.548077" stop-color="#965F7E" />
                           <stop offset="1" stop-color="#151630" />
-                        </linearGradient>
-                        <linearGradient
+                        </lineargradient>
+                        <lineargradient
                           id="paint12_linear_15_1242"
                           x1="99.4478"
                           y1="161.382"
@@ -881,7 +1104,7 @@
                           <stop offset="0.25" stop-color="#AB717D" />
                           <stop offset="0.548077" stop-color="#965F7E" />
                           <stop offset="1" stop-color="#151630" />
-                        </linearGradient>
+                        </lineargradient>
                       </defs>
                     </svg>
                   </div>
@@ -900,7 +1123,7 @@
       <div class="fixed__width m-auto px-16 pt-16 md:max-w-4xl">
         <div class="footer__container flex flex-col gap-8 md:flex-row md:gap-0">
           <div class="logo flex w-1/3 gap-2">
-            <img class="h-6 w-6" src="images/logo.png" alt="" />
+            <img class="h-6 w-6" src="images/logo.png" alt />
             <span class="font-semibold text-white">Dimention</span>
           </div>
           <div class="footer__navigation flex-3 flex justify-between md:w-2/3">
