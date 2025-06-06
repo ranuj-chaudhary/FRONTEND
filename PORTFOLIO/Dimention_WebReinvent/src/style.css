@@ -5,229 +5,191 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  /* Brand Colors */
-  --color-brand-primary: #080823;
-  --color-brand-secondary: #adb2ca;
-  --color-brand-accent: #ff5733;
-  --color-brand-success: #28a745;
-  --color-brand-danger: #dc3545;
-
-  /* Gradients */
-  /* Text Gradeints */
-  --text-gray: #7a7d96;
-
-  --text-gradient-two-colors: linear-gradient(
-    3.72deg,
-    rgba(240, 238, 250, 0.8) 3.05%,
-    #e1e8ff 96.95%
-  );
-  --text-gradient-three-colors: linear-gradient(
-    90deg,
-    #080823 0%,
-    #49496e 50%,
-    #080823 100%
-  );
-
-  --text-gradient-four-colors: linear-gradient(
-    90deg,
-    #b67dfc 0%,
-    #ef84d5 22.6%,
-    #ffac87 49.52%,
-    #ffdaa5 100%
-  );
-
-  --text-gradient-five-colors: linear-gradient(
-    90deg,
-    #ceaef7 6.63%,
-    #eda9e8 22.36%,
-    #ee94c5 46.48%,
-    #feb1a8 69.71%,
-    #f5b697 100%
-  );
-
-  /* Background gradient */
-  --background-gradient-two-colors: radial-gradient(
-    69.8% 673.61% at 50.51% 137.5%,
-    #616a8c 1.01%,
-    rgba(43, 50, 78, 0) 100%
-  );
-
-  --background-dark-gradient-two-colors: linear-gradient(
-    180deg,
-    #13142d 0%,
-    #191a34 100%
-  );
-  --background-gradient-three-colors: linear-gradient(
-    95.07deg,
-    #a66bff 4.59%,
-    #fe72c2 49.92%,
-    #ffa66d 98.87%
-  );
-
-  --btn-linear-gradient-custom-angle: linear-gradient(
-    177.66deg,
-    rgba(226, 232, 255, 0) 1.88%,
-    rgba(226, 232, 255, 0.121569) 97.97%
-  );
-  /* You can also add other global variables here, e.g., font stacks */
-  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  color-scheme: light dark; /* Signal light and dark theme support */
-
-  /* Font smoothing for better text rendering */
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 @layer base {
+  :root {
+    /* Brand Colors */
+    --color-brand-primary: #080823;
+    --color-brand-secondary: #adb2ca;
+    --color-brand-accent: #ff5733;
+    --color-brand-success: #28a745;
+    --color-brand-danger: #dc3545;
+
+    /* Gradients */
+    /* Text Gradeints */
+    --text-gray: #7a7d96;
+
+    --text-gradient-two-colors: linear-gradient(
+      3.72deg,
+      rgba(240, 238, 250, 0.8) 3.05%,
+      #e1e8ff 96.95%
+    );
+    --text-gradient-three-colors: linear-gradient(
+      90deg,
+      #080823 0%,
+      #49496e 50%,
+      #080823 100%
+    );
+
+    --text-gradient-four-colors: linear-gradient(
+      90deg,
+      #b67dfc 0%,
+      #ef84d5 22.6%,
+      #ffac87 49.52%,
+      #ffdaa5 100%
+    );
+
+    --text-gradient-five-colors: linear-gradient(
+      90deg,
+      #ceaef7 6.63%,
+      #eda9e8 22.36%,
+      #ee94c5 46.48%,
+      #feb1a8 69.71%,
+      #f5b697 100%
+    );
+
+    /* Background gradient */
+    --background-gradient-two-colors: radial-gradient(
+      69.8% 673.61% at 50.51% 137.5%,
+      #616a8c 1.01%,
+      rgba(43, 50, 78, 0) 100%
+    );
+
+    --background-dark-gradient-two-colors: linear-gradient(
+      180deg,
+      #13142d 0%,
+      #191a34 100%
+    );
+    --background-gradient-three-colors: linear-gradient(
+      95.07deg,
+      #a66bff 4.59%,
+      #fe72c2 49.92%,
+      #ffa66d 98.87%
+    );
+
+    --btn-linear-gradient-custom-angle: linear-gradient(
+      177.66deg,
+      rgba(226, 232, 255, 0) 1.88%,
+      rgba(226, 232, 255, 0.121569) 97.97%
+    );
+    --bg-linear-custom-angle-purple: linear-gradient(
+      180deg,
+      #292048 0%,
+      #3e355c 100%
+    );
+    --bg-linear-custom-angle-purple-light: linear-gradient(
+      180deg,
+      #1f2138 0%,
+      #393952 100%
+    );
+    /* You can also add other global variables here, e.g., font stacks */
+    font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color-scheme: light dark; /* Signal light and dark theme support */
+
+    /* Font smoothing for better text rendering */
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Body */
+
   body {
     background: var(--color-brand-primary);
     color: var(--color-brand-secondary);
   }
 }
-/* Borders */
-.custom-thin-border {
-  @apply border-[0.8px] border-[#1C1D36];
-}
-/* .thin-border {
-  @apply border-gray-400 border-2;
-} */
 
-/* ################# Gradients ##################### */
+/* Components */
 
-/* Custom Angle Gradients */
-.linear-gradient-custom-angle {
-  background: var(--btn-linear-gradient-custom-angle);
-}
+@layer components {
+  /* ################# Section Container ##################### */
+  .section-container {
+    @apply mx-auto max-w-7xl;
+  }
 
-/* Text Gradients */
+  .section-content {
+    @apply mx-auto max-w-3xl text-center leading-9;
+  }
 
-.text-gradient-four-colors {
-  background: var(--text-gradient-four-colors);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+  .button-container {
+    @apply flex w-full flex-col justify-center space-y-6 text-xl text-white md:flex-row md:space-y-0 md:space-x-4;
+  }
 
-.text-gradient-five-colors {
-  background: var(--text-gradient-five-colors);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+  /* ################# Hero Banner Section ##################### */
 
-.text-gradient-two-colors {
-  background: var(--text-gradient-two-colors);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+  .circle-biggest,
+  .circle-bigger,
+  .circle-bigger-overlay,
+  .circle-small,
+  .circle-small-overlay {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    @apply rounded-full;
+  }
 
-/*Background Gradients*/
+  .circle-biggest {
+    width: 1200px;
+    height: 1200px;
+    top: 0;
+    z-index: -12;
+    box-shadow: 10px 20px 90px 0px #ffffff10 inset;
+  }
 
-.background-gradient-two-colors {
-  background: var(--background-gradient-two-colors);
-}
-.background-dark-gradient-two-colors {
-  background: var(--background-dark-gradient-two-colors);
-}
+  .circle-bigger {
+    width: 900px;
+    height: 900px;
+    top: 180px;
+    z-index: -10;
+    @apply rounded-full;
+    filter: blur(40px);
+  }
 
-.background-gradient-three-colors {
-  background: var(--background-gradient-three-colors);
-}
+  .circle-bigger-overlay {
+    width: 900px;
+    height: 900px;
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-brand-primary);
+    z-index: -8;
+  }
 
-.background-gradient-four-colors {
-  background: var(--background-gradient-four-colors);
-}
+  .circle-small {
+    width: 900px;
+    height: 900px;
+    position: absolute;
+    top: 320px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -6;
+    @apply rounded-full;
+    overflow: hidden;
+    filter: blur(60px);
+    border-bottom: 0.8px solid;
+    box-shadow: 10px 50px 50px 0px var(--color-brand-primary) inset;
+  }
 
-/* ################# Section Container ##################### */
-.section-container {
-  @apply mx-auto max-w-6xl;
-}
+  .circle-small-overlay {
+    width: 900px;
+    height: 900px;
+    position: absolute;
+    top: 290px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-brand-primary);
+    z-index: -4;
+    @apply rounded-full;
+    box-shadow: 10px 20px 90px 0px #ffffff05 inset;
+  }
 
-.section-content {
-  @apply mx-auto max-w-3xl text-center leading-9;
-}
-
-.button-container {
-  @apply flex w-full flex-col justify-center space-y-6 text-xl text-white md:flex-row md:space-y-0 md:space-x-4;
-}
-
-/* ################# Hero Banner Section ##################### */
-
-.circle-biggest,
-.circle-bigger,
-.circle-bigger-overlay,
-.circle-small,
-.circle-small-overlay {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  overflow: hidden;
-  @apply rounded-full;
-}
-
-.circle-biggest {
-  width: 1200px;
-  height: 1200px;
-  top: 0;
-  z-index: -12;
-  box-shadow: 10px 20px 90px 0px #ffffff10 inset;
-}
-
-.circle-bigger {
-  width: 900px;
-  height: 900px;
-  top: 180px;
-  z-index: -10;
-  @apply rounded-full;
-  filter: blur(40px);
-}
-
-.circle-bigger-overlay {
-  width: 900px;
-  height: 900px;
-  position: absolute;
-  top: 130px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--color-brand-primary);
-  z-index: -8;
-}
-
-.circle-small {
-  width: 900px;
-  height: 900px;
-  position: absolute;
-  top: 320px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: -6;
-  @apply rounded-full;
-  overflow: hidden;
-  filter: blur(60px);
-  border-bottom: 0.8px solid;
-  box-shadow: 10px 50px 50px 0px var(--color-brand-primary) inset;
-}
-
-.circle-small-overlay {
-  width: 900px;
-  height: 900px;
-  position: absolute;
-  top: 290px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--color-brand-primary);
-  z-index: -4;
-  @apply rounded-full;
-  box-shadow: 10px 20px 90px 0px #ffffff05 inset;
-}
-
-/* utilities */
-
-@layer utilities {
   /* Hero Section Background Circle Animation */
+
   .circle-bigger::before,
   .circle-small::before {
     background-size: 100% 100%;
@@ -239,19 +201,128 @@
       #fca36e 98%
     );
   }
+
   .circle-bigger::before {
     @apply absolute left-[-25%] top-[-25%] h-[150%] w-[150%] animate-circle-spin-clockwise content-[''];
   }
   .circle-small::before {
     @apply absolute left-[-25%] top-[-25%] h-[150%] w-[150%] animate-circle-spin-anticlockwise content-[''];
   }
-  /* Button Animation */
+
+  /* Chat Panel */
+  .chat-panel {
+    @apply -z-20;
+  }
+
+  /*
+  background: linear-gradient(180deg, #FCA36E 0%, #7C4276 56.23%, #261F3C 100%);
+  cubic-animation slow fast
+  cubic-bezier(0.585, 0, 0.285, 1)
+
+  cubic benzeir breaking effect
+  cubic-bezier(0.68, -0.55, 0.265, 1.55);
+ */
+  .chat-panel::before {
+    background-size: 100% 100%;
+    background-position: 0px 0px;
+    background-image: conic-gradient(
+      from 270deg at 50% 50%,
+      #080823 92%,
+      #7c4276ff 96%,
+      #fca36e 98%
+    );
+    @apply absolute  h-[150%] w-[150%] top-[-25%] left-[-25%] origin-center animate-border-spin-slow-clockwise  content-[''] -z-10;
+  }
+
+  /* Card Section */
+
+  /* Left Card */
+  .left-card-nacati-cursor::before {
+    content: "";
+    @apply absolute left-[-123%] top-[-130%] h-4 w-36 rounded-full content-[''] bg-red-400/30 p-2 border-2 border-[#850623];
+  }
+
+  .card__left:hover .left-card-nacati-cursor {
+    transform: translateX(-172px);
+  }
+  .left-card-tejas-cursor,
+  .left-card-ojas-cursor {
+    transition: all 2s ease-in-out;
+  }
+
+  .card__left:hover .left-card-nacati-cursor::before {
+    @apply transform scale-x-50 bg-[#8686864F] border-[#999999];
+  }
+
+  .card__left .left-card-nacati-cursor,
+  .left-card-nacati-cursor::before {
+    transition: all 2s ease-in-out;
+    /* @apply transition-all duration-[2000s] ease-in-out; */
+  }
+
+  .card__left:hover .left-card-tejas-cursor {
+    transform: translateX(150px);
+  }
+
+  .card__left:hover .left-card-ojas-cursor {
+    transform: translateX(-215px);
+  }
+
+  /* Left Card Box*/
+
+ /* Stroke Animation Starts */
+
+  /* Big Stroke Box */
+  .card__stroke__halfbox__first::before {
+    background-size: 100% 100%;
+    background-position: 0px 0px;
+    background-image: conic-gradient(
+      from 80deg at 50% 50%,
+      #0808231a 92%,
+      #7c4276ff 96%,
+      #fca36e 98%
+    );
+
+    @apply absolute   h-[200%] w-[200%] top-[-50%] left-[-50%] origin-center animate-box-spin-slow-clockwise content-[''] -z-10;
+  }
+
+  .card__stroke__halfbox__second::before {
+    background-size: 100% 100%;
+    background-position: 0px 0px;
+    background-image: conic-gradient(
+      from 288deg at 50% 50%,
+      #fca36e 2%,
+      #7c4276ff 6%,
+      #0808231a 11%
+    );
+
+    @apply absolute h-[200%] opacity-0 w-[200%] top-[-50%] left-[-50%] origin-center content-[''] -z-10 animate-box-spin-linear-slow-anticlockwise;
+  }
+
+  /* Small Right Box */
+  .small__rightbox::before {
+    background-size: 100% 100%;
+    background-position: 0px 0px;
+    background-image: conic-gradient(
+      from 80deg at 50% 50%,
+      #0808231a 92%,
+      #7c4276ff 96%,
+      #fca36e 98%
+    );
+    @apply absolute h-[200%] w-[200%] top-[-50%] left-[-50%] origin-center content-[''] -z-10 animate-box-spin-slow-clockwise;
+  }
+
+  
+  /* bg-yellow-500/30 */
+  .card__stroke__fullbox__wrapper {
+    @apply h-[calc(100%-1px)] w-[calc(100%-1px)];
+  }
+
   /* Act as a border */
   .card-wrapper {
     @apply relative h-[calc(100%-6px)] w-[calc(100%-6px)] overflow-hidden rounded-md bg-gradient-to-b from-slate-800 to-slate-900;
   }
 
-  /* Gradient */
   .card-wrapper::before {
     background: conic-gradient(
       rgba(244, 114, 182, 0.4) 0deg,
@@ -259,14 +330,134 @@
       transparent 80deg
     );
 
-    @apply absolute left-[-25%] top-[-25%] h-[150%] w-[150%] animate-border-spin content-[''];
+    @apply absolute left-[-25%] top-[-25%] h-[150%] w-[150%] animate-border-spin-anticlockwise content-[''];
   }
 
-  /* Body */
   .card-content {
-    @apply absolute left-[2px] top-[2px] h-[calc(100%-2px)] w-[calc(100%-2px)] rounded-md bg-[#080823];
+    @apply absolute left-[1px] top-[1px] h-[calc(100%-2px)] w-[calc(100%-2px)] rounded-md bg-[#080823];
+  }
+
+  /* Stroke Animation Ends */
+
+/* Blinking Start Transition */
+  .start__blinking img {
+    transition: opacity 2s ease;
+  }
+
+  .start__blinking.fade-out {
+    opacity: 0;
+  }
+
+  .start__blinking.fade-in {
+    opacity: 1;
+  }
+
+
+
+  /* Spinning Wheel */
+
+  .left-center-figma-icon {
+    @apply absolute left-[50%] -translate-x-1/2 -translate-y-1/2;
+  }
+  .top-center-left-github-icon {
+    @apply absolute left-[45px] top-[32px] -translate-x-1/2 -translate-y-1/2;
+  }
+  .top-center-circle-threeline-icon {
+    @apply absolute left-[0] top-[144px] -translate-x-1/2 -translate-y-1/2;
+  }
+  .top-bottom-half-cloud-icon {
+    @apply absolute left-[32px] bottom-[45px] -translate-x-1/2 translate-y-1/2;
+  }
+  .bottom-left-center-neural-icon {
+    @apply absolute left-[50%] bottom-[0] -translate-x-1/2 translate-y-1/2;
+  }
+  .bottom-right-center-train-icon {
+    @apply absolute right-[32px] bottom-[45px] translate-x-1/2 translate-y-1/2;
+  }
+  .top-right-center-triangle-icon {
+    @apply absolute right-[0] top-[144px] translate-x-1/2 -translate-y-1/2;
+  }
+  .top-right-center-google-icon {
+    @apply absolute right-[45px] top-[32px] translate-x-1/2 -translate-y-1/2;
+  }
+  .center-icon {
+    @apply absolute left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2;
   }
 }
+
+/* utilities Starts*/
+
+@layer utilities {
+  /* ################# Borders ##################### */
+
+  /* .thin-border */
+  .custom-thin-border {
+    @apply border-[0.8px] border-[#1C1D36];
+  }
+
+  /* ################# Gradients ##################### */
+
+  /* Custom Angle Gradients */
+
+  .linear-gradient-custom-angle {
+    background: var(--btn-linear-gradient-custom-angle);
+  }
+
+  /* Text Gradients */
+
+  .text-gradient-four-colors {
+    background: var(--text-gradient-four-colors);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-five-colors {
+    background: var(--text-gradient-five-colors);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-two-colors {
+    background: var(--text-gradient-two-colors);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /*Background Gradients*/
+
+  .background-gradient-two-colors {
+    background: var(--background-gradient-two-colors);
+  }
+  .background-dark-gradient-two-colors {
+    background: var(--background-dark-gradient-two-colors);
+  }
+
+  .background-gradient-three-colors {
+    background: var(--background-gradient-three-colors);
+  }
+
+  .background-gradient-four-colors {
+    background: var(--background-gradient-four-colors);
+  }
+
+  .bg-linear-custom-angle-purple {
+    background: var(--bg-linear-custom-angle-purple);
+  }
+  .bg-linear-custom-angle-purple-light {
+    background: var(--bg-linear-custom-angle-purple-light);
+  }
+
+  .bg-custom-gradient {
+    background: linear-gradient(
+      119.37deg,
+      #382e5d 32%,
+      rgba(56, 46, 93, 0) 125.36%
+    );
+  }
+}
+/* utilities Ends*/
+
+/* Keyframes Starts*/
 
 /*Card Section Spinning Wheel  */
 
@@ -285,6 +476,7 @@
   box-shadow: 0px 0px 100px 60px rgba(126, 8, 126, 0.097) inset;
 }
 
+/* Home Section Key Frame */
 @keyframes rotate-clockwise {
   0% {
     transform: rotate(0deg);
@@ -303,56 +495,14 @@
   }
 }
 
-.left-center-figma-icon {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
+/* Card Section KeyFrame */
+@keyframes move-nacati-left {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-150px);
+  }
 }
-.top-center-left-github-icon {
-  position: absolute;
-  top: 32px;
-  left: 45px;
-  transform: translate(-50%, -50%);
-}
-.top-center-circle-threeline-icon {
-  position: absolute;
-  top: 144px;
-  left: 0;
-  transform: translate(-50%, -50%);
-}
-.top-bottom-half-cloud-icon {
-  position: absolute;
-  bottom: 45px;
-  left: 32px;
-  transform: translate(-50%, 50%);
-}
-.bottom-left-center-neural-icon {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translate(-50%, 50%);
-}
-.bottom-right-center-train-icon {
-  position: absolute;
-  bottom: 45px;
-  right: 32px;
-  transform: translate(50%, 50%);
-}
-.top-right-center-triangle-icon {
-  position: absolute;
-  top: 144px;
-  right: 0;
-  transform: translate(50%, -50%);
-}
-.top-right-center-google-icon {
-  position: absolute;
-  top: 32px;
-  right: 45px;
-  transform: translate(50%, -50%);
-}
-.center-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+
+/* Keyframes Ends */
