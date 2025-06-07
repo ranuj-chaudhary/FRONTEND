@@ -100,9 +100,9 @@ module.exports = {
       },
       animation: {
         "circle-spin-anticlockwise":
-          "circle-spin-anticlockwise 20s linear  infinite",
+          "circle-spin-anticlockwise 15s linear  infinite",
         "circle-spin-clockwise":
-          "circle-spin-clockwise 20s linear 500ms infinite",
+          "circle-spin-clockwise 15s linear 500ms infinite",
         "border-spin-anticlockwise":
           "border-spin-anticlockwise 5s ease-in infinite",
         "border-spin-slow-clockwise":
