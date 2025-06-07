@@ -13,10 +13,13 @@
     --color-brand-accent: #ff5733;
     --color-brand-success: #28a745;
     --color-brand-danger: #dc3545;
+    --color-border-primary: #1c1d36;
 
     /* Gradients */
     /* Text Gradeints */
     --text-gray: #7a7d96;
+    --text-palestale-blue: #aaafc6;
+    --text-slate-gray: #484a63;
 
     --text-gradient-two-colors: linear-gradient(
       3.72deg,
@@ -48,10 +51,10 @@
     );
 
     /* Background gradient */
-    --background-gradient-two-colors: radial-gradient(
-      69.8% 673.61% at 50.51% 137.5%,
-      #616a8c 1.01%,
-      rgba(43, 50, 78, 0) 100%
+    --background-gradient-two-colors: linear-gradient(
+      177.66deg,
+      rgba(226, 232, 255, 0) 1.88%,
+      rgba(226, 232, 255, 0.121569) 97.97%
     );
 
     --background-dark-gradient-two-colors: linear-gradient(
@@ -471,6 +474,9 @@
   .custom-thin-border {
     @apply border-[0.8px] border-[#1C1D36];
   }
+  .table-thin-border {
+    @apply border-[0.5px] border-[#1C1D36];
+  }
 
   /* ################# Gradients ##################### */
 
@@ -530,6 +536,10 @@
       #382e5d 32%,
       rgba(56, 46, 93, 0) 125.36%
     );
+  }
+  /* Chat Panel */
+  .child\:px-2-py-1 > * {
+    @apply px-6 py-1;
   }
 }
 /* utilities Ends*/

@@ -1,17 +1,404 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Cta Btn</title>
-    <meta name="description" content="" />
+    <meta name="description" content />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="" />
+    <link rel="stylesheet" href />
   </head>
   <body>
+    <!-- Chat Panel with Stroke Animation Starts-->
+    <div
+      class="section-container chat-panel h-[500px] mt-10 relative overflow-hidden rounded-sm"
+    >
+      <div class="card-content">
+        <div
+          class="w-full grid border-2 [grid-template-rows:80px_1fr] [grid-template-columns:80px_300px_1fr_300px]"
+        >
+          <!-- First Column First Row Starts -->
+          <div
+            class="p-2 first relative table-thin-border !border-b-0 !border-r-[0.5px]"
+          >
+            <img src="images/logo.png" class="w-10 m-auto" alt />
+            <div
+              class="absolute bottom-0 left-1/2 transition -translate-x-[50%] w-6 h-[1px] bg-[var(--color-border-primary)]"
+            ></div>
+          </div>
+          <!-- First Column First Row Ends -->
+          <!-- Second Column First Row Starts -->
+          <div
+            class="p-2 second table-thin-border flex items-center justify-between"
+          >
+            <div class="profile">
+              <img src="images/logo.png" class="w-6 h-6 inline-block" alt />
+              <span class="font-medium tracking">Dimention </span>
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="size-6 inline-block m-0"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M11.47 4.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1-1.06 1.06L12 6.31 8.78 9.53a.75.75 0 0 1-1.06-1.06l3.75-3.75Zm-3.75 9.75a.75.75 0 0 1 1.06 0L12 17.69l3.22-3.22a.75.75 0 1 1 1.06 1.06l-3.75 3.75a.75.75 0 0 1-1.06 0l-3.75-3.75a.75.75 0 0 1 0-1.06Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </span>
+            </div>
+            <div class="current-user flex gap-2 items-center">
+              <span
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </span>
+              <span class="w-8 h-8 rounded-full"
+                ><img
+                  src="images/tejas-profile-image.png"
+                  class="w-full h-full"
+                  alt
+              /></span>
+            </div>
+          </div>
+          <!-- Second Column First Row Ends -->
+          <!-- Third Column Third Row Starts -->
+          <div
+            class="p-2 third col-start-3 col-end-5 table-thin-border flex items-center"
+          >
+            <span>Core Team</span>
+          </div>
+          <!-- Third Column Third Row Ends -->
+          <!-- First Column Second Row Starts -->
+          <div class="p-2 fourth table-thin-border !border-t-0"></div>
+          <!-- First Column Second Row Ends -->
+
+          <!-- Second Column Second Row Starts -->
+          <div class="p-2 fifth table-thin-border">
+            <!-- Add Chat Group Starts-->
+            <div
+              class="add-chat-group flex justify-between items-center w-[95%] m-auto"
+            >
+              <span class="font-medium text-[var(--text-palestale-blue)]"
+                >Chat</span
+              >
+              <span>
+                <button
+                  type="button"
+                  aria-label="Add team group  hover:cursor-pointer"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg></button
+              ></span>
+            </div>
+            <!-- Team Chat Group Accordion Starts-->
+            <div class="team-chat-group">
+              <div class="accordion-container m-auto">
+                <div
+                  class="accordion-heading flex items-center gap-2 my-1 px-6 py-1"
+                >
+                  <button
+                    type="button"
+                    aria-label="Show Accodion Content"
+                    aria-expanded="true"
+                    class="hover:cursor-pointer text-[var(--text-slate-gray)]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      class="size-4"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                  <span class="text-sm text-[var(--text-slate-gray)]"
+                    >Team</span
+                  >
+                </div>
+                <!-- Team-groups Starts -->
+                <div class="team-groups">
+                  <ul class="">
+                    <li
+                      class="flex items-center gap-2 bg-purple-400/10 rounded-md px-6 py-1"
+                    >
+                      <span
+                        type="button"
+                        aria-label="Show Team group"
+                        class="text-[var(--text-slate-gray)]"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          class="size-4"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M11.097 1.515a.75.75 0 0 1 .589.882L10.666 7.5h4.47l1.079-5.397a.75.75 0 1 1 1.47.294L16.665 7.5h3.585a.75.75 0 0 1 0 1.5h-3.885l-1.2 6h3.585a.75.75 0 0 1 0 1.5h-3.885l-1.08 5.397a.75.75 0 1 1-1.47-.294l1.02-5.103h-4.47l-1.08 5.397a.75.75 0 1 1-1.47-.294l1.02-5.103H3.75a.75.75 0 0 1 0-1.5h3.885l1.2-6H5.25a.75.75 0 0 1 0-1.5h3.885l1.08-5.397a.75.75 0 0 1 .882-.588ZM10.365 9l-1.2 6h4.47l1.2-6h-4.47Z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </span>
+                      <span class="text-[var(--text-slate-gray)] text-sm"
+                        >dev</span
+                      >
+                    </li>
+                    <li class="flex items-center gap-2 rounded-md px-6 py-1">
+                      <span
+                        type="button"
+                        aria-label="Show Team group"
+                        class="text-[var(--text-slate-gray)]"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          class="size-4"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M11.097 1.515a.75.75 0 0 1 .589.882L10.666 7.5h4.47l1.079-5.397a.75.75 0 1 1 1.47.294L16.665 7.5h3.585a.75.75 0 0 1 0 1.5h-3.885l-1.2 6h3.585a.75.75 0 0 1 0 1.5h-3.885l-1.08 5.397a.75.75 0 1 1-1.47-.294l1.02-5.103h-4.47l-1.08 5.397a.75.75 0 1 1-1.47-.294l1.02-5.103H3.75a.75.75 0 0 1 0-1.5h3.885l1.2-6H5.25a.75.75 0 0 1 0-1.5h3.885l1.08-5.397a.75.75 0 0 1 .882-.588ZM10.365 9l-1.2 6h4.47l1.2-6h-4.47Z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </span>
+                      <span class="text-[var(--text-slate-gray)] text-sm"
+                        >chat</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <!-- Team-groups Ends -->
+              </div>
+            </div>
+            <!-- Team Chat Group Accordion Ends-->
+            <!-- Direct Message Group Accordion Starts-->
+            <div class="direct-message-group">
+              <div class="accordion-container m-auto">
+                <div
+                  class="accordion-heading flex items-center gap-2 my-1 px-6 py-1"
+                >
+                  <button
+                    type="button"
+                    aria-label="Show Accodion Content"
+                    aria-expanded="true"
+                    class="hover:cursor-pointer text-[var(--text-slate-gray)]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      class="size-4"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                  <span class="text-sm text-[var(--text-slate-gray)]"
+                    >Direct Message</span
+                  >
+                </div>
+                <!-- Direct Message Group Starts -->
+                <div class="team-groups">
+                  <ul class="">
+                    <li class="flex items-center gap-2 rounded-md px-6 py-1">
+                      <span
+                        type="button"
+                        aria-label="Show Team group"
+                        class="text-[var(--text-slate-gray)]"
+                      >
+                        <img
+                          src="images/tejas-profile-image.png"
+                          class="w-6 h-6"
+                          alt=""
+                        />
+                      </span>
+                      <span class="text-[var(--text-slate-gray)] text-sm"
+                        >Tejas</span
+                      >
+                    </li>
+                    <li class="flex items-center gap-2 rounded-md px-6 py-1">
+                      <span
+                        type="button"
+                        aria-label="Show Team group"
+                        class="text-[var(--text-slate-gray)]"
+                      >
+                        <img
+                          src="images/ari-profile-image.png"
+                          class="w-6 h-6"
+                          alt=""
+                        />
+                      </span>
+                      <span class="text-[var(--text-slate-gray)] text-sm"
+                        >Ari</span
+                      >
+                    </li>
+                    <li class="flex items-center gap-2 rounded-md px-6 py-1">
+                      <span
+                        type="button"
+                        aria-label="Show Team group"
+                        class="text-[var(--text-slate-gray)]"
+                      >
+                        <img
+                          src="images/landan-profile-image.png"
+                          class="w-6 h-6"
+                          alt=""
+                        />
+                      </span>
+                      <span class="text-[var(--text-slate-gray)] text-sm"
+                        >Landan</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <!-- Direct Message Group Ends -->
+              </div>
+            </div>
+            <!-- Direct Message Group Accordion Ends-->
+          </div>
+          <!-- Second Column Second Row Ends -->
+
+          <!-- Third Column Second Row Starts -->
+          <section
+            class="p-2 sixth table-thin-border"
+            aria-label="Chat conversation"
+          >
+            <ul>
+              <!-- Tejas Message -->
+              <li class="mt-4">
+                <article
+                  aria-label="Message from Tejas"
+                  class="flex items-start gap-3"
+                >
+                  <img
+                    src="images/tejas-profile-image.png"
+                    alt="Alice's profile picture"
+                    class="w-8 h-8 rounded-full"
+                  />
+                  <div>
+                    <header class="text-sm flex gap-2">
+                      <strong
+                        class="block text-[var(--text-palestale-blue)] font-medium"
+                        >Tejas</strong
+                      >
+                      <time
+                        datetime="2025-06-07T01:14"
+                        class="text-[var(--text-slate-gray)]"
+                        >1:14 PM</time
+                      >
+                    </header>
+                    <p class="mt-1">
+                      Hey Ari! I wanted to check in with you on the next release
+                      and bug list. Do you think we’ll be on track to share the
+                      latest with the team on Friday?
+                    </p>
+                  </div>
+                </article>
+              </li>
+
+              <!-- Ari Message -->
+              <li class="mt-4">
+                <article
+                  aria-label="Message from Tejas"
+                  class="flex items-start gap-3"
+                >
+                  <img
+                    src="images/tejas-profile-image.png"
+                    alt="Alice's profile picture"
+                    class="w-8 h-8 rounded-full"
+                  />
+                  <div>
+                    <header class="text-sm flex gap-2">
+                      <strong
+                        class="block text-[var(--text-palestale-blue)] font-medium"
+                        >Ari</strong
+                      >
+                      <time
+                        datetime="2025-06-07T01:15"
+                        class="text-[var(--text-slate-gray)]"
+                        >1:15 PM</time
+                      >
+                    </header>
+                    <p class="mt-1">
+                      There are a few items on the tasklist that needs to be
+                      addressed on IOS.
+                    </p>
+                  </div>
+                </article>
+              </li>
+              <!-- Tejas Message -->
+              <li class="mt-4">
+                <article
+                  aria-label="Message from Tejas"
+                  class="flex items-start gap-3"
+                >
+                  <img
+                    src="images/tejas-profile-image.png"
+                    alt="Alice's profile picture"
+                    class="w-8 h-8 rounded-full"
+                  />
+                  <div>
+                    <header class="text-sm flex gap-2">
+                      <strong
+                        class="block text-[var(--text-palestale-blue)] font-medium"
+                        >Tejas</strong
+                      >
+                      <time
+                        datetime="2025-06-07T01:16"
+                        class="text-[var(--text-slate-gray)]"
+                        >1:16 PM</time
+                      >
+                    </header>
+                    <p class="mt-1">
+                      Awesome! Make sure it looks as close to the Figma as
+                      possible :) here’s a link to our Figma file if you don’t
+                      have access yet!
+                    </p>
+                  </div>
+                </article>
+              </li>
+            </ul>
+          </section>
+          <!-- Third Column Second Row Ends -->
+
+          <!-- Fourth Column Second Row Start -->
+          <div class="p-2 seventh table-thin-border">seventh</div>
+          <!-- Fourth Column Second Row Ends -->
+        </div>
+      </div>
+    </div>
+    <!-- Chat Panel with Stroke Animation Ends-->
     <!-- Btn Cta Main Container Starts-->
-    <div class="main-container w-40 h-[70px] relative">
+    <div class="main-container w-40 h-[70px] relative mt-96">
       <!-- Bottom Div Starts -->
       <div
         class="responsive-stroke-container btn-bottom-wrapper btn-cta-border-color"
