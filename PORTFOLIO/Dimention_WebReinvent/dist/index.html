@@ -42,7 +42,7 @@
     <!-- Hero Section Starts-->
     <section class="hero py-4">
       <div class="section-container pt-20">
-        <div class="relative overflow-hidden pb-24">
+        <div class="relative overflow-hidden pb-2">
           <div
             class="title m-auto flex max-w-4xl flex-col items-center justify-center text-center"
           >
@@ -61,7 +61,7 @@
               Chat, code, cloud, deployments, and more
             </p>
             <div
-              class="input mt-4 flex items-center justify-center gap-4 text-sm"
+              class="input mt-4 h-[90px] flex items-center justify-center gap-4 text-sm"
             >
               <input
                 class="rounded-md border-solid border-[#2C2C43] bg-opacity-50 p-2 text-[#D9D9D90D] text-gray-50 backdrop-blur-2xl"
@@ -69,31 +69,44 @@
                 placeholder="Email address..."
               />
               <!-- Hero Animated Button Starts-->
-              <div class="main-container animated-border-button h-16 w-36">
-                <div class="card-wrapper">
-                  <div
-                    class="card-content flex items-center justify-center text-xs"
-                  >
-                    <div class="card-wrapper">
-                      <div
-                        class="card-content flex items-center justify-center text-xs"
-                      >
-                        <div class="card-wrapper">
+              <!-- Btn Cta Main Container Starts-->
+              <div class="main-container w-40 h-[70px] relative">
+                <!-- Bottom Div Starts -->
+                <div
+                  class="responsive-stroke-container btn-bottom-wrapper btn-cta-border-color"
+                >
+                  <div class="btn-wrapper">
+                    <!-- Secondlast Div Starts-->
+                    <div
+                      class="responsive-stroke-container btn-secondlast-wrapper btn-cta-border-color"
+                    >
+                      <div class="btn-wrapper">
+                        <!-- Second Div Starts-->
+                        <div
+                          class="responsive-stroke-container btn-second-wrapper btn-cta-border-color"
+                        >
+                          <!-- Btn Content Starts-->
                           <div
-                            class="card-content flex items-center justify-center"
+                            class="btn-wrapper flex items-center justify-center"
                           >
                             <button
-                              class="background-gradient-three-colors h-[calc(100%-6px)] w-[calc(100%-6px)] rounded-md px-4 py-2 text-center text-xs font-medium text-[#B4BAD1]"
+                              type="button"
+                              class="background-gradient-three-colors h-[calc(100%-4px)] w-[calc(100%-4px)] rounded-md px-4 py-2 text-center text-xs font-medium text-[#B4BAD1]"
                             >
-                              Join waitlist
+                              Join Waitlist
                             </button>
                           </div>
+                          <!-- Btn Content Ends-->
                         </div>
+                        <!-- Second Div Ends-->
                       </div>
                     </div>
+                    <!-- Secondlast Div Ends -->
                   </div>
                 </div>
+                <!-- Bottom Div Starts -->
               </div>
+              <!-- Btn Cta Main Container Ends-->
               <!-- Hero Animated Button Ends-->
             </div>
           </div>
@@ -106,6 +119,7 @@
           <!-- Rotation Animation Circles Ends-->
         </div>
       </div>
+
       <!-- Chat Panel with Animation -->
       <div
         class="section-container chat-panel h-[500px] mt-10 relative overflow-hidden rounded-sm"
@@ -138,6 +152,29 @@
     <!-- Stroke Animation Section Start-->
     <section id="card">
       <div class="section-container mb-6 relative">
+        <!-- Star Blinking Starts -->
+        <!--Right Star Blinking Starts-->
+        <div
+          class="absolute flex justify-center items-center w-28 h-28 top-[340px] md:w-36 md:h-36 md:top-[320px] left-[65%] z-50"
+        >
+          <img
+            src="images/vertical-star-1.svg"
+            alt=""
+            class="vertical__star__blinking object-contain"
+          />
+        </div>
+        <!--Left Star Blinking Starts-->
+        <div
+          class="bg-[var(--color-brand-primary)] rounded-br-2xl absolute z-50 left-20 top-28"
+        >
+          <img
+            class="horizontal__star__blinking object-contain"
+            src="images/star-pattern-1.svg"
+            alt=""
+          />
+        </div>
+        <!-- Star Blinking Ends -->
+
         <!-- Main Stroke Boxes -->
         <!-- bg-[var(--color-brand-primary)] -->
         <!-- bg-[#1F203B] -->
@@ -151,13 +188,7 @@
             <!-- Wrapper Starts -->
             <div
               class="card__stroke__fullbox__wrapper bg-[var(--color-brand-primary)] rounded-br-2xl"
-            >
-              <div
-                class="start__blinking bg-[var(--color-brand-primary)] rounded-br-2xl"
-              >
-                <img src="" alt="" />
-              </div>
-            </div>
+            ></div>
             <!-- Wrapper Ends -->
           </div>
           <!-- Second Stroke Box -->
@@ -179,45 +210,57 @@
         </div>
 
         <div class="fixed__width m-auto p-6 md:max-w-5xl relative">
-         
-          <div class="card__heading m-auto max-w-md md:max-w-none mt-[200px] relative">
+          <div
+            class="card__heading m-auto max-w-md md:max-w-none mt-[200px] relative"
+          >
             <!-- Animated Lightning Icon Start -->
-            <div class="main-container animated-border-button ml-4 h-24 w-28">
-              <div class="card-wrapper">
-                <div
-                  class="card-content flex items-center justify-center text-xs"
-                >
-                  <div class="card-wrapper">
-                    <div
-                      class="card-content flex items-center justify-center text-xs"
-                    >
-                      <div class="card-wrapper">
+
+            <!-- Btn Cta Main Container Starts-->
+            <div class="main-container ml-4 h-24 w-28 relative">
+              <!-- Bottom Div Starts -->
+              <div
+                class="responsive-stroke-container btn-bottom-wrapper btn-cta-border-color"
+              >
+                <div class="btn-wrapper">
+                  <!-- Secondlast Div Starts-->
+                  <div class="responsive-stroke-container btn-cta-border-color">
+                    <div class="btn-wrapper">
+                      <!-- Second Div Starts-->
+                      <div
+                        class="responsive-stroke-container btn-second-wrapper btn-cta-border-color"
+                      >
+                        <!-- Btn Content Starts-->
                         <div
-                          class="card-content flex items-center justify-center"
+                          class="btn-wrapper flex items-center justify-center p-2"
                         >
                           <img
                             src="images/lightning__icon.png"
-                            class="logo"
+                            class="logo object-contain"
                             alt
                           />
                         </div>
+                        <!-- Btn Content Ends-->
                       </div>
+                      <!-- Second Div Ends-->
                     </div>
                   </div>
+                  <!-- Secondlast Div Ends -->
                 </div>
               </div>
+              <!-- Bottom Div Starts -->
             </div>
+            <!-- Btn Cta Main Container Ends-->
+
             <!-- Animated Lightning Icon Ends -->
-             <div class="heading relative">
+
+            <div class="heading relative flex gap-6">
               <h2 class="mt-8 text-5xl text-white">
-              Build software
-              <span class="text-gradient-five-colors">faster, together.</span>
-            </h2>
-               <span class="vertical__start__blinking absolute top-0 right-44 w-24"
-            ><img src="w-full" alt=""
-          /></span>
-             </div>
-            
+                Build software
+                <span class="text-gradient-five-colors">faster, together.</span>
+              </h2>
+              <!-- bg-[var(--color-brand-primary)] -->
+            </div>
+
             <p class="text-[#999DB6]">
               The most complete developer experience.
             </p>
@@ -599,59 +642,55 @@
                       >
                         <div class="icon-container icon-rotation-anticlockwise">
                           <svg
-                            width="29"
-                            height="28"
-                            viewBox="0 0 29 28"
+                            width="55"
+                            height="55"
+                            viewBox="0 0 55 55"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                           >
-                            <g clip-path="url(#clip0_450_307)">
-                              <path
-                                d="M7.41211 6.9999L0.412109 13.9999L7.44711 21.0349L14.4996 28.0874L15.2346 27.3524L15.9521 26.6174L15.0771 25.3399C14.6046 24.6399 13.7471 23.3974 13.1871 22.5749C9.45961 17.1149 9.66961 17.3774 9.03961 17.4649C8.30461 17.5699 7.97211 17.8499 7.32461 19.0049C6.76461 20.0024 6.62461 20.1074 6.29211 19.7049C6.15211 19.5299 6.27461 19.1974 6.88711 18.2699C7.98961 16.6074 7.93711 16.5024 6.39711 17.2199C4.75211 18.0074 4.59461 18.0424 4.27961 17.6924C4.01711 17.3949 4.08711 17.3424 5.60961 16.7124C6.83461 16.2049 7.13211 16.0124 6.86961 15.9249C6.69461 15.8549 5.39961 15.5749 3.99961 15.3124C1.96961 14.9274 1.37461 14.7524 1.04211 14.4199C0.797109 14.1924 0.639609 13.9649 0.692109 13.9124C0.779609 13.8249 3.12461 14.2799 6.15211 14.9624C8.12961 15.3999 8.14711 15.1549 6.27461 12.4949C4.64711 10.2024 4.57711 10.0624 4.87461 9.7124C5.11961 9.4149 5.01461 9.2749 7.14961 12.4074C8.23461 13.9999 8.53211 14.3324 8.89961 14.3499C9.40711 14.3499 9.33711 14.4374 11.1746 11.5499C12.1371 10.0099 12.5046 9.3099 12.3821 9.1524C12.2771 9.0474 12.1896 8.7324 12.1546 8.4524C12.1021 8.0149 11.9446 7.8924 10.2471 7.1749C9.21461 6.7374 8.40961 6.3174 8.42711 6.2299C8.56711 5.7574 9.05711 5.7399 9.98461 6.1774C11.7696 7.0349 12.6796 7.3324 12.9421 7.1574C13.0821 7.0699 13.3971 6.9999 13.6421 6.9999C14.1146 6.9999 14.0971 7.0349 16.1096 3.7799L16.9671 2.3974L15.7771 1.1899C15.1296 0.542402 14.5521 -9.72748e-05 14.4996 -9.72748e-05C14.4471 -9.72748e-05 11.2621 3.1499 7.41211 6.9999Z"
-                                fill="white"
-                              />
-                              <path
-                                d="M17.2121 3.49983C17.0371 3.81483 16.4071 4.82983 15.8121 5.75733C14.5171 7.71733 14.4646 8.18983 15.5146 8.57483C15.8821 8.69733 16.6346 9.01233 17.2296 9.29233C18.5071 9.86983 19.0671 10.0273 19.3471 9.83483C19.4521 9.76483 19.6971 8.78483 19.8546 7.64733L20.1696 5.58233L18.8396 4.25233L17.5096 2.92233L17.2121 3.49983Z"
-                                fill="white"
-                              />
-                              <path
-                                d="M20.6247 7.73496C20.5197 8.43496 20.3972 9.22246 20.3447 9.48496C20.2047 10.1675 20.7297 10.255 21.8672 9.71246C22.3922 9.46746 22.8997 9.27496 23.0222 9.27496C23.5997 9.27496 23.3547 8.78496 22.2697 7.68246C21.6047 7.01746 21.0097 6.47496 20.9572 6.47496C20.8872 6.47496 20.7472 7.05246 20.6247 7.73496Z"
-                                fill="white"
-                              />
-                              <path
-                                d="M14.4995 9.36249C14.377 9.50249 14.0445 9.65999 13.7295 9.71249C13.3445 9.79999 13.0645 10.01 12.7845 10.465C12.5745 10.815 11.892 11.9 11.2795 12.8625C10.667 13.825 10.177 14.63 10.1945 14.665C10.247 14.7 14.2545 13.02 17.0895 11.76C17.877 11.41 18.5245 11.0425 18.5245 10.92C18.5245 10.7275 17.4395 10.185 15.602 9.46749C14.832 9.16999 14.6745 9.15249 14.4995 9.36249Z"
-                                fill="white"
-                              />
-                              <path
-                                d="M22.8293 10.15C21.2018 10.85 21.1143 10.955 21.9543 11.305C22.3218 11.4625 22.9518 11.725 23.3543 11.9175C23.7393 12.0925 24.4743 12.39 24.9818 12.6C25.4893 12.7925 26.3993 13.195 27.0118 13.475C27.6243 13.7725 28.2368 14 28.3593 14C28.4818 14 27.6068 13.02 26.3993 11.8125C25.1918 10.605 24.1768 9.625 24.1243 9.625C24.0718 9.625 23.4943 9.87 22.8293 10.15Z"
-                                fill="white"
-                              />
-                              <path
-                                d="M20.3097 12.0399C19.9947 12.2849 19.8547 12.6699 19.6447 13.9999C19.4872 14.9099 19.3297 15.8724 19.2772 16.1524C19.2247 16.4149 19.3122 16.8874 19.4697 17.2199C19.7497 17.7974 19.7847 17.8149 21.8497 18.2174L23.9672 18.6199L25.8747 16.7124C26.9422 15.6624 27.7997 14.7524 27.7997 14.6999C27.7997 14.6474 27.1172 14.3324 26.2772 13.9999C25.4197 13.6674 24.6672 13.3524 24.5622 13.2824C24.3697 13.1424 20.9047 11.7249 20.7822 11.7249C20.7472 11.7249 20.5372 11.8649 20.3097 12.0399Z"
-                                fill="white"
-                              />
-                              <path
-                                d="M15.8993 13.1424C11.2443 15.1199 10.4743 15.4699 10.5268 15.6624C10.5968 15.8549 10.7193 15.8724 14.6393 16.6949C16.1968 17.0099 17.4743 17.2024 17.4743 17.1324C17.4743 17.0449 17.7018 16.8699 17.9643 16.7299C18.4193 16.4849 18.4718 16.3624 18.7518 14.4899C19.0843 12.2674 19.1018 11.8999 18.9268 11.8999C18.8393 11.8999 17.4918 12.4599 15.8993 13.1424Z"
-                                fill="white"
-                              />
-                              <path
-                                d="M10.2996 16.7823C10.2996 16.9398 11.8396 19.2848 14.3596 22.9248C14.7271 23.4498 15.3571 24.3773 15.7596 24.9898C16.3896 25.8998 16.5296 26.0398 16.7396 25.8298C16.8796 25.6898 17.1771 24.2373 17.4746 22.3123L17.9821 19.0223L17.5971 18.5498C17.2646 18.1298 16.8621 18.0073 14.1496 17.4298C12.4696 17.0623 10.9121 16.7298 10.7021 16.6773C10.4746 16.6248 10.2996 16.6773 10.2996 16.7823Z"
-                                fill="white"
-                              />
-                              <path
-                                d="M19.1546 18.7774C18.9096 18.9524 18.7346 19.6349 18.4196 21.6999C18.1921 23.1699 18.0171 24.4124 18.0521 24.4299C18.0871 24.4649 19.2771 23.3099 20.7121 21.8749C22.5846 20.0024 23.2321 19.2499 22.9871 19.2499C22.7946 19.2499 22.0071 19.0924 21.2371 18.8999C19.5746 18.4799 19.5571 18.4799 19.1546 18.7774Z"
-                                fill="white"
-                              />
-                            </g>
+                            <foreignObject x="-4" y="-4" width="63" height="63"
+                              ><div
+                                xmlns="http://www.w3.org/1999/xhtml"
+                                style="
+                                  backdrop-filter: blur(2px);
+                                  clip-path: url(#bgblur_0_1379_1091_clip_path);
+                                  height: 100%;
+                                  width: 100%;
+                                "
+                              ></div
+                            ></foreignObject>
+                            <circle
+                              data-figma-bg-blur-radius="4"
+                              cx="27.5"
+                              cy="27.5"
+                              r="27"
+                              fill="#151732"
+                              fill-opacity="0.9"
+                              stroke="#36395A"
+                            />
+                            <path
+                              d="M24.0017 14.7998C21.2684 15.5331 18.6462 17.2664 17.024 19.422L16.1795 20.5553L22.1351 20.6887C28.2017 20.822 29.2684 20.9553 30.9128 21.7998C31.8906 22.2887 34.2684 24.822 34.7795 25.9331C35.2462 26.9109 35.1351 28.4887 34.5351 29.1553C33.6017 30.1776 33.224 30.222 23.7795 30.222C16.024 30.222 14.8906 30.2664 14.8906 30.5553C14.8906 30.8442 16.3795 30.8887 26.8906 30.8887H38.8906L39.1351 30.2664C39.5795 29.1776 39.6462 25.7998 39.2462 24.1553C38.1573 19.5553 34.4906 15.8442 29.9573 14.7776C28.2017 14.3776 25.6017 14.3776 24.0017 14.7998Z"
+                              fill="white"
+                            />
+                            <path
+                              d="M15.1342 22.911C15.0009 23.311 14.8898 23.6666 14.8898 23.6888C14.8898 23.7332 17.0898 23.7777 19.7786 23.7777H24.6675V24.5554V25.3332H19.5564H14.4453V25.8888V26.4443H23.8898C29.0898 26.4443 33.3342 26.3554 33.3342 26.2666C33.3342 25.8666 30.712 23.3554 29.7786 22.8666C28.8009 22.3332 28.6453 22.3332 22.0898 22.2666L15.3786 22.1999L15.1342 22.911Z"
+                              fill="white"
+                            />
+                            <path
+                              d="M14.4453 28.2216C14.4453 28.666 14.6009 28.666 23.5786 28.666C32.3786 28.666 33.5564 28.5771 33.5564 27.9993C33.5564 27.866 30.0009 27.7771 24.0009 27.7771C14.6009 27.7771 14.4453 27.7771 14.4453 28.2216Z"
+                              fill="white"
+                            />
+                            <path
+                              d="M15.9558 32.4665C15.6892 32.6442 16.0225 33.3109 16.9781 34.5553C22.7336 41.9331 33.7781 40.9998 38.1558 32.7776C38.4003 32.3331 38.3336 32.3331 27.2892 32.3331C21.1781 32.3331 16.0892 32.3998 15.9558 32.4665Z"
+                              fill="white"
+                            />
                             <defs>
-                              <clippath id="clip0_450_307">
-                                <rect
-                                  width="28"
-                                  height="28"
-                                  fill="white"
-                                  transform="translate(0.5)"
-                                />
-                              </clippath>
+                              <clipPath
+                                id="bgblur_0_1379_1091_clip_path"
+                                transform="translate(4 4)"
+                              >
+                                <circle cx="27.5" cy="27.5" r="27" />
+                              </clipPath>
                             </defs>
                           </svg>
                         </div>
@@ -661,59 +700,47 @@
                       >
                         <div class="icon-container icon-rotation-anticlockwise">
                           <svg
-                            width="29"
-                            height="28"
-                            viewBox="0 0 29 28"
+                            width="56"
+                            height="56"
+                            viewBox="0 0 56 56"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                           >
-                            <g clip-path="url(#clip0_450_307)">
-                              <path
-                                d="M7.41211 6.9999L0.412109 13.9999L7.44711 21.0349L14.4996 28.0874L15.2346 27.3524L15.9521 26.6174L15.0771 25.3399C14.6046 24.6399 13.7471 23.3974 13.1871 22.5749C9.45961 17.1149 9.66961 17.3774 9.03961 17.4649C8.30461 17.5699 7.97211 17.8499 7.32461 19.0049C6.76461 20.0024 6.62461 20.1074 6.29211 19.7049C6.15211 19.5299 6.27461 19.1974 6.88711 18.2699C7.98961 16.6074 7.93711 16.5024 6.39711 17.2199C4.75211 18.0074 4.59461 18.0424 4.27961 17.6924C4.01711 17.3949 4.08711 17.3424 5.60961 16.7124C6.83461 16.2049 7.13211 16.0124 6.86961 15.9249C6.69461 15.8549 5.39961 15.5749 3.99961 15.3124C1.96961 14.9274 1.37461 14.7524 1.04211 14.4199C0.797109 14.1924 0.639609 13.9649 0.692109 13.9124C0.779609 13.8249 3.12461 14.2799 6.15211 14.9624C8.12961 15.3999 8.14711 15.1549 6.27461 12.4949C4.64711 10.2024 4.57711 10.0624 4.87461 9.7124C5.11961 9.4149 5.01461 9.2749 7.14961 12.4074C8.23461 13.9999 8.53211 14.3324 8.89961 14.3499C9.40711 14.3499 9.33711 14.4374 11.1746 11.5499C12.1371 10.0099 12.5046 9.3099 12.3821 9.1524C12.2771 9.0474 12.1896 8.7324 12.1546 8.4524C12.1021 8.0149 11.9446 7.8924 10.2471 7.1749C9.21461 6.7374 8.40961 6.3174 8.42711 6.2299C8.56711 5.7574 9.05711 5.7399 9.98461 6.1774C11.7696 7.0349 12.6796 7.3324 12.9421 7.1574C13.0821 7.0699 13.3971 6.9999 13.6421 6.9999C14.1146 6.9999 14.0971 7.0349 16.1096 3.7799L16.9671 2.3974L15.7771 1.1899C15.1296 0.542402 14.5521 -9.72748e-05 14.4996 -9.72748e-05C14.4471 -9.72748e-05 11.2621 3.1499 7.41211 6.9999Z"
-                                fill="white"
-                              />
-                              <path
-                                d="M17.2121 3.49983C17.0371 3.81483 16.4071 4.82983 15.8121 5.75733C14.5171 7.71733 14.4646 8.18983 15.5146 8.57483C15.8821 8.69733 16.6346 9.01233 17.2296 9.29233C18.5071 9.86983 19.0671 10.0273 19.3471 9.83483C19.4521 9.76483 19.6971 8.78483 19.8546 7.64733L20.1696 5.58233L18.8396 4.25233L17.5096 2.92233L17.2121 3.49983Z"
-                                fill="white"
-                              />
-                              <path
-                                d="M20.6247 7.73496C20.5197 8.43496 20.3972 9.22246 20.3447 9.48496C20.2047 10.1675 20.7297 10.255 21.8672 9.71246C22.3922 9.46746 22.8997 9.27496 23.0222 9.27496C23.5997 9.27496 23.3547 8.78496 22.2697 7.68246C21.6047 7.01746 21.0097 6.47496 20.9572 6.47496C20.8872 6.47496 20.7472 7.05246 20.6247 7.73496Z"
-                                fill="white"
-                              />
-                              <path
-                                d="M14.4995 9.36249C14.377 9.50249 14.0445 9.65999 13.7295 9.71249C13.3445 9.79999 13.0645 10.01 12.7845 10.465C12.5745 10.815 11.892 11.9 11.2795 12.8625C10.667 13.825 10.177 14.63 10.1945 14.665C10.247 14.7 14.2545 13.02 17.0895 11.76C17.877 11.41 18.5245 11.0425 18.5245 10.92C18.5245 10.7275 17.4395 10.185 15.602 9.46749C14.832 9.16999 14.6745 9.15249 14.4995 9.36249Z"
-                                fill="white"
-                              />
-                              <path
-                                d="M22.8293 10.15C21.2018 10.85 21.1143 10.955 21.9543 11.305C22.3218 11.4625 22.9518 11.725 23.3543 11.9175C23.7393 12.0925 24.4743 12.39 24.9818 12.6C25.4893 12.7925 26.3993 13.195 27.0118 13.475C27.6243 13.7725 28.2368 14 28.3593 14C28.4818 14 27.6068 13.02 26.3993 11.8125C25.1918 10.605 24.1768 9.625 24.1243 9.625C24.0718 9.625 23.4943 9.87 22.8293 10.15Z"
-                                fill="white"
-                              />
-                              <path
-                                d="M20.3097 12.0399C19.9947 12.2849 19.8547 12.6699 19.6447 13.9999C19.4872 14.9099 19.3297 15.8724 19.2772 16.1524C19.2247 16.4149 19.3122 16.8874 19.4697 17.2199C19.7497 17.7974 19.7847 17.8149 21.8497 18.2174L23.9672 18.6199L25.8747 16.7124C26.9422 15.6624 27.7997 14.7524 27.7997 14.6999C27.7997 14.6474 27.1172 14.3324 26.2772 13.9999C25.4197 13.6674 24.6672 13.3524 24.5622 13.2824C24.3697 13.1424 20.9047 11.7249 20.7822 11.7249C20.7472 11.7249 20.5372 11.8649 20.3097 12.0399Z"
-                                fill="white"
-                              />
-                              <path
-                                d="M15.8993 13.1424C11.2443 15.1199 10.4743 15.4699 10.5268 15.6624C10.5968 15.8549 10.7193 15.8724 14.6393 16.6949C16.1968 17.0099 17.4743 17.2024 17.4743 17.1324C17.4743 17.0449 17.7018 16.8699 17.9643 16.7299C18.4193 16.4849 18.4718 16.3624 18.7518 14.4899C19.0843 12.2674 19.1018 11.8999 18.9268 11.8999C18.8393 11.8999 17.4918 12.4599 15.8993 13.1424Z"
-                                fill="white"
-                              />
-                              <path
-                                d="M10.2996 16.7823C10.2996 16.9398 11.8396 19.2848 14.3596 22.9248C14.7271 23.4498 15.3571 24.3773 15.7596 24.9898C16.3896 25.8998 16.5296 26.0398 16.7396 25.8298C16.8796 25.6898 17.1771 24.2373 17.4746 22.3123L17.9821 19.0223L17.5971 18.5498C17.2646 18.1298 16.8621 18.0073 14.1496 17.4298C12.4696 17.0623 10.9121 16.7298 10.7021 16.6773C10.4746 16.6248 10.2996 16.6773 10.2996 16.7823Z"
-                                fill="white"
-                              />
-                              <path
-                                d="M19.1546 18.7774C18.9096 18.9524 18.7346 19.6349 18.4196 21.6999C18.1921 23.1699 18.0171 24.4124 18.0521 24.4299C18.0871 24.4649 19.2771 23.3099 20.7121 21.8749C22.5846 20.0024 23.2321 19.2499 22.9871 19.2499C22.7946 19.2499 22.0071 19.0924 21.2371 18.8999C19.5746 18.4799 19.5571 18.4799 19.1546 18.7774Z"
-                                fill="white"
-                              />
-                            </g>
+                            <foreignObject
+                              x="-3.61133"
+                              y="-3.61133"
+                              width="63"
+                              height="63"
+                              ><div
+                                xmlns="http://www.w3.org/1999/xhtml"
+                                style="
+                                  backdrop-filter: blur(2px);
+                                  clip-path: url(#bgblur_0_1379_1104_clip_path);
+                                  height: 100%;
+                                  width: 100%;
+                                "
+                              ></div
+                            ></foreignObject>
+                            <circle
+                              data-figma-bg-blur-radius="4"
+                              cx="27.8887"
+                              cy="27.8887"
+                              r="27"
+                              fill="#151732"
+                              fill-opacity="0.9"
+                              stroke="#36395A"
+                            />
+                            <path
+                              d="M16.082 37.7503H39.9154L27.9987 17.167"
+                              fill="white"
+                            />
                             <defs>
-                              <clippath id="clip0_450_307">
-                                <rect
-                                  width="28"
-                                  height="28"
-                                  fill="white"
-                                  transform="translate(0.5)"
-                                />
-                              </clippath>
+                              <clipPath
+                                id="bgblur_0_1379_1104_clip_path"
+                                transform="translate(3.61133 3.61133)"
+                              >
+                                <circle cx="27.8887" cy="27.8887" r="27" />
+                              </clipPath>
                             </defs>
                           </svg>
                         </div>
@@ -1193,6 +1220,67 @@
       </div>
     </footer>
     <!-- Footer Ends-->
+
     <script src="bundle.js"></script>
+
+    <script>
+      // Horizontal and Vertical Star Blinking
+      let timerId = null;
+      const horizontalStar = document.querySelector(
+        ".horizontal__star__blinking"
+      );
+      const verticalStar = document.querySelector(".vertical__star__blinking");
+
+      const horizontalStars = [
+        "images/star-pattern-1.svg",
+        "images/star-pattern-2.svg",
+        "images/star-pattern-3.svg",
+        "images/star-pattern-4.svg",
+      ];
+      // const verticalStars = horizontalStars
+      const verticalStars = [
+        "images/vertical-star-1.svg",
+        "images/vertical-star-2.svg",
+        "images/vertical-star-3.svg",
+        "images/vertical-star-4.svg",
+      ];
+
+      let i = -1;
+      let j = -1;
+
+      horizontalStar.classList.add("fade-in");
+
+      setInterval(() => {
+        i++;
+        j++;
+
+        if (i === horizontalStars.length) i = 0;
+        if (j === verticalStars.length) j = 0;
+
+        horizontalStar.onload = function () {
+          clearTimeout(timerId);
+
+          fadeIn(horizontalStar);
+          fadeIn(verticalStar);
+
+          console.log(timerId);
+          timerId = setTimeout(() => {
+            fadeOut(horizontalStar);
+            fadeOut(verticalStar);
+          }, 1300);
+        };
+        horizontalStar.src = horizontalStars[i];
+        verticalStar.src = verticalStars[i];
+      }, 1800);
+
+      function fadeIn(ele) {
+        ele.classList.add("fade-in");
+        ele.classList.remove("fade-out");
+      }
+      function fadeOut(ele) {
+        ele.classList.remove("fade-in");
+        ele.classList.add("fade-out");
+      }
+    </script>
   </body>
 </html>

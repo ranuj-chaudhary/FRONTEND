@@ -1,32 +1,24 @@
 import "./style.css";
-const horizontalStars = ['images/star-pattern-1.svg', 'images/star-pattern-2.svg', 'images/star-pattern-3.svg', 'images/star-pattern-4.svg']
-const verticalStars = ['images/vertical-star-pattern-1.svg', 'images/vertical-star-pattern-2.svg', 'images/vertical-star-pattern-3.svg', 'images/vertical-star-pattern-4.svg']
-const horizontalStar = document.querySelector(".start__blinking img")
-const verticalStar = document.querySelector(".vertical__start__blinking img")
 
-let i = -1;
+// // Horizontal and Vertical Star Blinking
+// const horizontalStar = document.querySelector(".horizontal__star__blinking");
+// const verticalStar = document.querySelector(".vertical__star__blinking");
 
- setInterval(()=> {
-    i++  
-    if(i === 4) i = 0;
-    //   vertical start blinking
-    horizontalStar.classList.remove("fade-in");
-    horizontalStar.classList.add("fade-out");
-    horizontalStar.src = horizontalStars[i];
-     horizontalStar.onload = () => {
-        horizontalStar.classList.remove("fade-out");
-        horizontalStar.classList.add("fade-in");
-      };
+// const horizontalStars = ['images/star-pattern-1.svg', 'images/star-pattern-2.svg', 'images/star-pattern-3.svg', 'images/star-pattern-4.svg']
+// // const verticalStars = horizontalStars
+// const verticalStars = ['images/vertical-star-1.svg', 'images/vertical-star-2.svg', 'images/vertical-star-3.svg', 'images/vertical-star-4.svg']
 
-    //   vertical start blinking
-    verticalStar.classList.remove("fade-in");
-    verticalStar.classList.add("fade-out");
+// let i = -1;
+// let j = -1;
 
-     verticalStar.src = verticalStars[i];
-     verticalStar.onload = () => {
-        verticalStar.classList.remove("fade-out");
-        verticalStar.classList.add("fade-in");
-      };
-    
-}, 2000)
+//  setInterval(()=> {
+//     i++  
+//     j++
+//     if(i === horizontalStars.length) i = 0;
+//     if(j === verticalStars.length) j = 0;
+
+//    horizontalStar.src = horizontalStars[i];
+//    verticalStar.src = verticalStars[i];
+ 
+// }, 2000)
 
