@@ -16,6 +16,9 @@ module.exports = {
     hot: true,
     compress: true,
     historyApiFallback: true,
+    host: '0.0.0.0', // allows access from local network
+    port: 8080,
+    allowedHosts: 'all',
   },
   module: {
     rules: [
