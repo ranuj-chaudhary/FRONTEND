@@ -98,7 +98,6 @@
 
     /* You can also add other global variables here, e.g., font stacks */
     font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
-    line-height: 1.5;
     font-weight: 400;
     color-scheme: light dark; /* Signal light and dark theme support */
 
@@ -140,14 +139,6 @@
   background:linear-gradient(276.71deg, rgba(202, 183, 255, 0.0392157) -18.68%, rgba(255, 155, 197, 0.0392157) 38.63%, rgba(255, 202, 149, 0.0392157) 95.94%);
 }
   /* Background Big Circle Animation Starts */
-
-  /* .circle-biggest,
-  .circle-bigger,
-  .circle-bigger-overlay,
-  .circle-small,
-  .circle-small-overlay {
-    @apply rounded-full left-1/2 transform -translate-x-1/2 overflow-hidden;
-  } */
 
   .circle-biggest {
     box-shadow: 10px 20px 90px 0px #ffffff10 inset;
@@ -366,7 +357,7 @@
 
   /* Stroke Animation Ends */
 
-  /* Blinking Start Transition Starts*/
+  /* Blinking Star Transition Starts*/
   .horizontal__star__blinking,
   .vertical__star__blinking {
     transition: all 1.6s ease;
@@ -382,7 +373,7 @@
   .vertical__star__blinking.fade-in {
     opacity: 1;
   }
-  /* Blinking Start Transition Ends*/
+  /* Blinking Star Transition Ends*/
 
   /* Left Collaborate Card Hover Starts*/
   .left-card-nacati-cursor::before {
@@ -451,11 +442,15 @@
   /* Spinning Wheel Ends*/
 
   /* ################# Card Ends ##################### */
+
   /* Footer */
   
 }
+
 /* Components Ends*/
-/* ################# Utilities ##################### */
+
+
+/* ################# Utilities Starts ##################### */
 
 @layer utilities {
   /* ################# Borders ##################### */
@@ -532,26 +527,10 @@
     @apply px-6 py-1;
   }
 }
-/* utilities Ends*/
+/* ################# Utilities Ends ##################### */
 
-/* Keyframes Starts*/
 
-/*Card Section Spinning Wheel  */
-
-.icon-rotation-anticlockwise {
-  animation: rotate-clockwise 20s linear infinite;
-}
-
-.icon-rotation-clockwise {
-  animation: rotate-anti-clockwise 20s linear infinite;
-  transform-origin: center;
-}
-.outer-container {
-  box-shadow: 0px 0px 100px 60px rgba(126, 8, 126, 0.097) inset;
-}
-.overlay-container-inset-shadow {
-  box-shadow: 0px 0px 100px 60px rgba(126, 8, 126, 0.097) inset;
-}
+/* ################# Keyframes Starts ##################### */
 
 /* Home Section Key Frame */
 @keyframes rotate-clockwise {
@@ -582,4 +561,4 @@
   }
 }
 
-/* Keyframes Ends */
+/* ################# Keyframes Ends ##################### */
