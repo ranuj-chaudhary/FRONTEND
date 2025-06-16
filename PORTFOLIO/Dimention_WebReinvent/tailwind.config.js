@@ -48,7 +48,7 @@ module.exports = {
             opacity: 1,
           },
           "100%": {
-            transform: "rotate(359.9deg)",
+            transform: "rotate(360deg)",
             opacity: 0,
           },
         },
@@ -83,7 +83,7 @@ module.exports = {
         "btn-cta-slow-clockwise": {
           "0%": { transform: "rotate(0deg)" },
           "100%": {
-            transform: "rotate(359.9deg)",
+            transform: "rotate(360deg)",
           },
         },
         "box-spin-linear-slow-anticlockwise": {
@@ -101,23 +101,23 @@ module.exports = {
       },
       animation: {
         "circle-spin-anticlockwise":
-          "circle-spin-anticlockwise 15s linear  infinite",
+          "circle-spin-anticlockwise 10s ease-in-out infinite",
         "circle-spin-clockwise":
-          "circle-spin-clockwise 15s linear 500ms infinite",
+          "circle-spin-clockwise 10s ease-in-out 500ms infinite",
         "border-spin-anticlockwise":
-          "border-spin-anticlockwise 5s ease-in infinite",
+          "border-spin-anticlockwise 5s linear infinite",
         "border-spin-slow-clockwise":
-          "border-spin-slow-clockwise 15s  cubic-bezier(0.585, 0, 0.285, 1) infinite both",
+          "border-spin-slow-clockwise 15s  cubic-bezier(0.585, 0, 0.285, 1) infinite",
         "box-spin-slow-clockwise":
-          "box-spin-slow-clockwise 10s ease-in-out infinite forwards",
+          "box-spin-slow-clockwise 10s linear infinite",
         "box-spin-linear-slow-anticlockwise":
           "box-spin-linear-slow-anticlockwise 10s linear 5s infinite",
         "btn-bottom-wrapper-spin-ease-clockwise":
-          "btn-cta-slow-clockwise 25s linear 50ms infinite forwards",
+          "btn-cta-slow-clockwise 25s linear 50ms infinite",
         "btn-secondlast-wrapper-spin-ease-clockwise":
-          "btn-cta-slow-clockwise 15s linear 20ms infinite forwards",
+          "btn-cta-slow-clockwise 15s linear 20ms infinite",
         "btn-second-wrapper-spin-ease-clockwise":
-          "btn-cta-slow-clockwise 10s linear infinite forwards",
+          "btn-cta-slow-clockwise 10s linear infinite",
       },
     },
   },
