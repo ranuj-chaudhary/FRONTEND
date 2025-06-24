@@ -1,0 +1,17 @@
+.boxes {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  border: 2px dotted red;
+  color: white;
+}
+
+.active {
+  background-color: green;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="app">
+        <!-- Three ways to dynamically change styles -->
+        <div class="boxes">
+            <div @click="handleBoxClicked('A')" class="box" :class="[boxASelected ? 'active' : '']">1</div>
+            <div @click="handleBoxClicked('B')" class="box" :class="{'active': boxBSelected}">2</div>
+            <div @click="handleBoxClicked('C')" :class="['box', {'active': boxCSelected}]">3</div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@3.4.9/dist/vue.global.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
