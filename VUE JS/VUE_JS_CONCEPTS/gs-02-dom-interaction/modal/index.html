@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .overlay {
+            width: 100vw;
+            background-color: rgba(44, 46, 44, 0.3);
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            backdrop-filter: opacity(.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .modal-content {
+            z-index: 10;
+            background-color: white;
+            width: 50%;
+            height: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div v-if="toggleModal" class="overlay" @click.self="handleModalToggle">
+            <div class="modal-content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem qui officiis nulla iure, sequi
+                    labore eligendi vel nihil! Eius cum temporibus distinctio deleniti ipsam ea quisquam quae rerum ut
+                    provident.</p>
+            </div>
+        </div>
+
+        <button @click="handleModalToggle">Toggle Modal</button>
+    </div>
+    <script src="https://unpkg.com/vue@3.4.9/dist/vue.global.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
