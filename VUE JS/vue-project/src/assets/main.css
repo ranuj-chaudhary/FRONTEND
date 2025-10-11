@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@import "./base.css";
+
+.btn {
+  background-color: blue;
+  border: none;
+  color: white;
+  letter-spacing: 2px;
+  padding: 10px 6px;
+}
+
+.btn:active {
+  scale: 95%;
+}

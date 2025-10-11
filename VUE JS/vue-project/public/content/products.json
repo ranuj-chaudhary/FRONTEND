@@ -1,0 +1,104 @@
+{
+  "products": [
+    {
+      "id": "p001",
+      "title": "Men's Running Shoes",
+      "description": "Lightweight, breathable running shoes with cushioned sole and modern design.",
+      "price": {
+        "original": 4999,
+        "discounted": 3499,
+        "currency": "INR",
+        "discountPercent": 30
+      },
+      "images": [
+        "https://example.com/images/shoe1-1.jpg",
+        "https://example.com/images/shoe1-2.jpg"
+      ],
+      "variants": {
+        "sizes": ["7", "8", "9", "10", "11"],
+        "colors": ["Black", "Navy Blue", "Gray"]
+      },
+      "stock": {
+        "available": true,
+        "quantity": 120
+      },
+      "rating": 4.5,
+      "reviews": [
+        {
+          "user": "Arjun M.",
+          "rating": 5,
+          "comment": "Super comfortable and stylish. Loved the grip!",
+          "date": "2024-12-01"
+        },
+        {
+          "user": "Rajesh P.",
+          "rating": 4,
+          "comment": "Good for daily running. Slightly tight fit.",
+          "date": "2025-01-15"
+        }
+      ],
+      "tags": ["running", "shoes", "men", "sportswear"],
+      "seller": {
+        "id": "seller123",
+        "name": "SportZone India",
+        "rating": 4.2
+      },
+      "specs": {
+        "material": "Mesh, Rubber",
+        "weight": "700g",
+        "countryOfOrigin": "India"
+      }
+    },
+    {
+      "id": "p002",
+      "title": "Smart LED TV 43\" Full HD",
+      "description": "43-inch Full HD Smart LED TV with inbuilt WiFi, Netflix, and YouTube support.",
+      "price": {
+        "original": 27999,
+        "discounted": 21999,
+        "currency": "INR",
+        "discountPercent": 21
+      },
+      "images": [
+        "https://example.com/images/tv1.jpg",
+        "https://example.com/images/tv2.jpg"
+      ],
+      "variants": {
+        "sizes": ["32\"", "43\"", "50\""],
+        "colors": ["Black"]
+      },
+      "stock": {
+        "available": true,
+        "quantity": 45
+      },
+      "rating": 4.3,
+      "reviews": [
+        {
+          "user": "Neha D.",
+          "rating": 4,
+          "comment": "Crisp display and easy to use interface. Worth the price!",
+          "date": "2025-02-10"
+        },
+        {
+          "user": "Anil S.",
+          "rating": 5,
+          "comment": "Excellent product. Installation was smooth.",
+          "date": "2025-03-02"
+        }
+      ],
+      "tags": ["electronics", "TV", "smart", "LED"],
+      "seller": {
+        "id": "seller456",
+        "name": "ElectroMart",
+        "rating": 4.6
+      },
+      "specs": {
+        "resolution": "1920x1080",
+        "connectivity": ["HDMI", "USB", "WiFi"],
+        "smartFeatures": ["Netflix", "YouTube", "Screen Cast"],
+        "warranty": "1 year",
+        "powerConsumption": "75W"
+      }
+    }
+  ]
+}
